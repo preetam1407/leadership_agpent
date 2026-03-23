@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.cache/
+.ipynb_checkpoints/
+data/parsed/
+data/indexes/
+outputs/sample_answers/
+outputs/sample_plots/
+data/eval/results.json

@@ -1,0 +1,33 @@
+[
+  {
+    "question": "What is our current revenue trend?",
+    "expected_docs": [
+      "adobe_q2_fy2025_investor_datasheet"
+    ]
+  },
+  {
+    "question": "Which departments are underperforming?",
+    "expected_docs": [
+      "adobe_q2_fy2025_investor_datasheet"
+    ]
+  },
+  {
+    "question": "What were the key risks highlighted in the last quarter?",
+    "expected_docs": [
+      "adobe_fy2024_annual_report",
+      "adobe_q2_fy2025_earnings_release"
+    ]
+  },
+  {
+    "question": "What does Adobe emphasize about AI, Firefly and Acrobat AI Assistant?",
+    "expected_docs": [
+      "adobe_fy2024_annual_report"
+    ]
+  },
+  {
+    "question": "What is Adobe's Digital Media ARR trend from Q4 FY2024 to Q2 FY2025?",
+    "expected_docs": [
+      "adobe_q2_fy2025_investor_datasheet"
+    ]
+  }
+]
