@@ -1,0 +1,263 @@
+{
+  "question": "What is our current revenue trend?",
+  "question_class": "trend_analysis",
+  "direct_answer": "Revenue shows an upward trend from Q1FY24 (5,182) to Q2FY25 (5,873), a change of 13.3%.",
+  "key_evidence": [
+    "Computed from table evidence: Revenue shows an upward trend from Q1FY24 (5,182) to Q2FY25 (5,873), a change of 13.3%.",
+    "Series used: Q1FY24=5,182, Q2FY24=5,309, Q3FY24=5,408, Q4FY24=5,606."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "ddae8d08e60fdb5e"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "Cost of Revenue"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "681ace6afefbcff0"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "Revenue"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "bd8edd89d2d86c64"
+    }
+  ],
+  "caveats": [
+    "This answer is based on the supplied quarterly revenue series and does not include a full trailing-12-month calculation beyond the reported quarters.",
+    "No segment-level or geographic revenue trend was provided in the computed facts, so this is company-wide only.",
+    "The answer’s specific quarterly values (Q1FY24 5,182; Q2FY25 5,873) are not fully supported by the provided evidence. Evidence id 9 shows Revenue ($Billions) with Q1FY24=5.18 and Q2FY25=5.87, but it does not show the intermediate quarters in the same units/format as the answer (e.g., 5,309; 5,408; 5,606; 5,714).",
+    "The computed +13.3% change is not directly evidenced. The evidence provides Q1FY24=5.18 and Q2FY25=5.87 (billions), which would imply a different percentage change than +13.3% depending on rounding, but the answer does not show the calculation and the exact +13.3% is not stated in the evidence.",
+    "Evidence id 10 is truncated (it only shows Revenue values up to Q1FY24=5,182), so it cannot substantiate the full series used in the answer."
+  ],
+  "evidence_pack": [
+    {
+      "id": 1,
+      "object_id": "ddae8d08e60fdb5e",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Document Overview: Revenue: Q1FY23=4,655, Q2FY23=4,816, Q3FY23=4,890; Cost of revenue: Q1FY23=568, Q2FY23=572, Q3FY23=580; Gross profit: Q1FY23=4,087, Q2FY23=4,244, Q3FY23=4,310",
+      "score": 1.5095
+    },
+    {
+      "id": 2,
+      "object_id": "af06910a72d74750",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Document Overview: Total Revenue: Q1FY23=4.66, Q2FY23=4.82, Q3FY23=4.89; Digital Media: Q1FY23=3.40, Q2FY23=3.51, Q3FY23=3.59; Digital Experience: Q1FY23=1.18, Q2FY23=1.22, Q3FY23=1.23",
+      "score": 1.3591
+    },
+    {
+      "id": 3,
+      "object_id": "422c81a3a3a6880a",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "General Contract Provisions"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "We maintain revenue reserves for rebates, rights of return and other limited price adjustments. Distributors are allowed limited rights of return of products purchased during the previous quarter. In addition, distributors are allowed to return products that have reached the end of their lives, as defined by us, and for products that are being replaced by new versions. We offer rebates to our distributors, resellers and/or end-user customers. Transaction price is reduced for these amounts based on actual performance against objectives set forth by us for a particular reporting period, such as volume and timely reporting. On a quarterly basis, the amount of revenue that is reserved is calcula",
+      "score": 1.0493
+    },
+    {
+      "id": 4,
+      "object_id": "2c4bb3a9182e5688",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "2 Digital Media Annualized Recurring Revenue (\"ARR\") = Annual Value of Digital Media Subscriptions and Services + Annual Value of Digital Media ETLA Contracts.  ARR is forecasted annually at currency rates determined in December, and currency rates are held constant through that fiscal year for measurement purposes; actual quarter-end ARR balances for the prior completed fiscal year are revalued in December at new rates for the next fiscal year.  3 Revenue associated with the Creative &amp; Marketing Professionals customer group consists of Digital Experience offerings as well as Creative Cloud flagship apps within Digital Media.  4 Revenue associated with the Business Professionals &amp; Co",
+      "score": 0.9656
+    },
+    {
+      "id": 5,
+      "object_id": "681ace6afefbcff0",
+      "object_type": "table",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "Cost of Revenue"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "| (dollars in millions) | 2024 | 2023 | 2022 | % Change 2024-2023 | |----------------------------------------------------------------------------------------------------------|---------|---------|---------|----------------------| | Subscription......................................................................................... | $ 1,799 | $ 1,822 | $ 1,646 | (1)% | | Percentage of total revenue............................................................... | 8 % | 9 % | 9 % | | | Product................................................................................................. | 25 | 29 | 35 | (14)% | | Percentage of total revenue...................................................",
+      "score": 0.9526
+    },
+    {
+      "id": 6,
+      "object_id": "d4b69c94e1d78ce9",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ADOBE INC.",
+        "NOTES TO CONSOLIDATED FINANCIAL STATEMENTS (Continued)"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "As of December 1, 2023, the balance of deferred revenue was $5.95 billion. Significant movements in the deferred revenue balance during the period consisted of increases due to payments received prior to transfer of control of the underlying performance obligations to the customer, which were offset by decreases due to revenue recognized in the period. During the year ended November 29, 2024, approximately $5.87 billion of revenue was recognized that was included in the balance of deferred revenue as of December 1, 2023. Transaction price allocated to remaining performance obligations represents contracted revenue that has not yet been recognized, which includes deferred revenue and unbilled",
+      "score": 0.9288
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "What is our current revenue trend?",
+        "question_class": "trend_analysis",
+        "lexical_query": "current revenue trend revenue trendline last 12 months quarterly monthly YTD",
+        "semantic_query": "Determine the current direction and momentum of our revenue over the most recent reporting periods (e.g., QoQ/YoY), including whether it is increasing, decreasing, or flat and the magnitude of change.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "annual_report",
+          "quarterly_report",
+          "monthly_report",
+          "financial_statements"
+        ],
+        "target_metrics": [
+          "revenue",
+          "total revenue",
+          "net revenue",
+          "gross revenue",
+          "revenue growth rate",
+          "YoY revenue growth % (if available)"
+        ],
+        "target_entities": [
+          "company",
+          "business units",
+          "regions",
+          "customer segments"
+        ],
+        "time_focus": "last 4 quarters (or last 12 months)",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 176,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 76,
+      "chunk_hits": 11,
+      "table_hits": 51,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [
+        {
+          "label": "Revenue",
+          "period": "Q1FY24",
+          "value": 5182.0,
+          "raw_value": "5,182",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q2FY24",
+          "value": 5309.0,
+          "raw_value": "5,309",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q3FY24",
+          "value": 5408.0,
+          "raw_value": "5,408",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q4FY24",
+          "value": 5606.0,
+          "raw_value": "5,606",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q1FY25",
+          "value": 5714.0,
+          "raw_value": "5,714",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q2FY25",
+          "value": 5873.0,
+          "raw_value": "5,873",
+          "page": null
+        }
+      ],
+      "trend_summary": "Revenue shows an upward trend from Q1FY24 (5,182) to Q2FY25 (5,873), a change of 13.3%.",
+      "risk_factors": [],
+      "risk_signals": [],
+      "strategy_signals": [
+        "We maintain revenue reserves for rebates, rights of return and other limited price adjustments.",
+        "Distributors are allowed limited rights of return of products purchased during the previous quarter.",
+        "In addition, distributors are allowed to return products that have reached the end of their lives, as defined by us, and for products that are being replaced by new versions.",
+        "We offer rebates to our distributors, resellers and/or end-user customers.",
+        "Transaction price is reduced for these amounts based on actual performance against objectives set forth by us for a particular reporting period, such as volume and timely reporting.",
+        "This estimate can be affected by the amount of a particular product in the channel, the rate of sell-through, product plans and other factors."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": "outputs\\sample_plots\\what_is_our_current_revenue_trend.png",
+    "evidence_support": {
+      "top_dense_score": 0.6855340003967285,
+      "query_overlap_ratio": 0.083
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 176,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 2392,
+        "output_tokens": 259,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2505,
+        "output_tokens": 239,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nRevenue shows an upward trend from Q1FY24 (5,182) to Q2FY25 (5,873), a change of 13.3%.\n\n## Key Evidence\n- Computed from table evidence: Revenue shows an upward trend from Q1FY24 (5,182) to Q2FY25 (5,873), a change of 13.3%.\n- Series used: Q1FY24=5,182, Q2FY24=5,309, Q3FY24=5,408, Q4FY24=5,606.\n\n## Sources\n- adobe_q2_fy2025_investor_datasheet.pdf | Document Overview | pages n/a\n- adobe_fy2024_annual_report.pdf | Cost of Revenue | pages n/a\n- adobe_fy2024_annual_report.pdf | Revenue | pages n/a\n\n## Caveats\n- This answer is based on the supplied quarterly revenue series and does not include a full trailing-12-month calculation beyond the reported quarters.\n- No segment-level or geographic revenue trend was provided in the computed facts, so this is company-wide only.\n- The answer’s specific quarterly values (Q1FY24 5,182; Q2FY25 5,873) are not fully supported by the provided evidence. Evidence id 9 shows Revenue ($Billions) with Q1FY24=5.18 and Q2FY25=5.87, but it does not show the intermediate quarters in the same units/format as the answer (e.g., 5,309; 5,408; 5,606; 5,714).\n- The computed +13.3% change is not directly evidenced. The evidence provides Q1FY24=5.18 and Q2FY25=5.87 (billions), which would imply a different percentage change than +13.3% depending on rounding, but the answer does not show the calculation and the exact +13.3% is not stated in the evidence.\n- Evidence id 10 is truncated (it only shows Revenue values up to Q1FY24=5,182), so it cannot substantiate the full series used in the answer."
+}

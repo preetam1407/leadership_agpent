@@ -1,0 +1,220 @@
+{
+  "question": "What is our current revenue trend?",
+  "question_class": "trend_analysis",
+  "direct_answer": "Revenue is trending upward. The supplied series shows revenue rising from 5,182 in Q1FY24 to 5,873 in Q2FY25, a cumulative increase of 13.3%. The most recent quarter also increased from Q1FY25 (5,714) to Q2FY25 (5,873), indicating the upward trend is continuing.",
+  "key_evidence": [
+    "Revenue increased each quarter in the provided series: Q1FY24 5,182; Q2FY24 5,309; Q3FY24 5,408; Q4FY24 5,606; Q1FY25 5,714; Q2FY25 5,873.",
+    "The computed trend summary states revenue shows an upward trend from Q1FY24 to Q2FY25, a change of 13.3%.",
+    "The Q2FY25 earnings release says Adobe achieved record revenue of $5.87 billion in Q2FY25, representing 11% year-over-year growth as reported and in constant currency."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Second Quarter Fiscal Year 2025 Financial Highlights"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "5b2878f841ff5ad1"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Condensed Consolidated Statements of Income"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "4d72d6c7a33981b4"
+    }
+  ],
+  "caveats": [
+    "The evidence provided is quarterly only; no monthly or full-year trend series was supplied.",
+    "The 13.3% change is based on the computed facts series from Q1FY24 to Q2FY25, while the 11% figure is the company-reported year-over-year growth for Q2FY25 versus Q2FY24; these are different comparisons.",
+    "No segment-level or regional revenue trend data was provided, so this answer reflects total company revenue only.",
+    "The provided answer cites a quarterly revenue series (Q1FY24 5,182; Q2FY24 5,309; Q3FY24 5,408; Q4FY24 5,606; Q1FY25 5,714; Q2FY25 5,873) and a 13.3% cumulative increase, but none of those specific quarter-by-quarter revenue figures (for FY24 quarters and Q1FY25) appear in the supplied evidence.",
+    "Evidence does support that Q2FY25 revenue was $5.87B and that it was +11% year-over-year (source id 8), but it does not substantiate the full upward trend claim across the listed quarters.",
+    "The evidence includes a table snippet for Q1FY23–Q3FY23 (source id 1/2) and a partial income statement snippet for Q2FY25 vs Q2FY24 (source id 10), neither of which covers the full FY24→Q2FY25 sequence used in the answer."
+  ],
+  "evidence_pack": [
+    {
+      "id": 8,
+      "object_id": "5b2878f841ff5ad1",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Second Quarter Fiscal Year 2025 Financial Highlights"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "- Adobe achieved record revenue of $5.87 billion in its second quarter of fiscal year 2025, which represents 11 percent year-over-year growth as reported and in constant currency. Diluted earnings per share was $3.94 on a GAAP basis and $5.06 on a non-GAAP basis. - GAAP operating income in the second quarter was $2.11 billion and non-GAAP operating income was $2.67 billion. GAAP net income was $1.69 billion and non-GAAP net income was $2.17 billion. - Cash flows from operations were $2.19 billion. - Exiting the quarter, Remaining Performance Obligations ('RPO') were $19.69 billion, and Current Remaining Performance Obligations ('cRPO') were 67 percent. - Adobe repurchased approximately 8.6 m",
+      "score": 0.5456
+    },
+    {
+      "id": 10,
+      "object_id": "4d72d6c7a33981b4",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Condensed Consolidated Statements of Income"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "| | Three Months Ended | Three Months Ended | Six Months Ended | Six Months Ended | |-------------------------------------------------------------------------------------|----------------------|----------------------|--------------------|--------------------| | | May 30, 2025 | May 31, 2024 | May 30, 2025 | May 31, 2024 | | Revenue: | | | | | | Subscription .................................................................. | $ 5,641 | $ 5,060 | $ 11,124 | $ 9,976 | | Product ......................................................................... | 88 | 104 | 183 | 223 | | Services and other ........................................................ | 144 | 145 | 280 | 292 | | Total revenue .",
+      "score": 0.4271
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "What is our current revenue trend?",
+        "question_class": "trend_analysis",
+        "lexical_query": "current revenue trend revenue trend last quarter last year monthly quarterly annual",
+        "semantic_query": "Determine the current direction and momentum of our revenue over the most recent reporting periods (e.g., MoM/YoY/quarterly), including growth rate and any inflection points.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "annual_report",
+          "quarterly_report",
+          "financial_statements",
+          "kpi_dashboard"
+        ],
+        "target_metrics": [
+          "revenue",
+          "total revenue",
+          "net revenue",
+          "revenue growth rate",
+          "YoY revenue growth",
+          "QoQ revenue growth"
+        ],
+        "target_entities": [
+          "company",
+          "business units",
+          "regions",
+          "product lines"
+        ],
+        "time_focus": "recent_periods",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 160,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 80,
+      "chunk_hits": 8,
+      "table_hits": 56,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [
+        {
+          "label": "Revenue",
+          "period": "Q1FY24",
+          "value": 5182.0,
+          "raw_value": "5,182",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q2FY24",
+          "value": 5309.0,
+          "raw_value": "5,309",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q3FY24",
+          "value": 5408.0,
+          "raw_value": "5,408",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q4FY24",
+          "value": 5606.0,
+          "raw_value": "5,606",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q1FY25",
+          "value": 5714.0,
+          "raw_value": "5,714",
+          "page": null
+        },
+        {
+          "label": "Revenue",
+          "period": "Q2FY25",
+          "value": 5873.0,
+          "raw_value": "5,873",
+          "page": null
+        }
+      ],
+      "trend_summary": "Revenue shows an upward trend from Q1FY24 (5,182) to Q2FY25 (5,873), a change of 13.3%.",
+      "risk_factors": [
+        "failure to innovate effectively and meet customer needs",
+        "issues relating to development and use of AI",
+        "failure to compete effectively",
+        "damage to our reputation or brands",
+        "failure to realize the anticipated benefits of investments or acquisitions",
+        "service interruptions or failures in information technology systems by us or third parties",
+        "security incidents",
+        "failure to effectively develop, manage and maintain critical third-party business relationships",
+        "risks associated with being a multinational corporation and adverse macroeconomic conditions",
+        "complex sales cycles"
+      ],
+      "risk_signals": [
+        "Each of the forward-looking statements we make in this press release involves risks, uncertainties and assumptions based on information available to us as of the date of this press release.",
+        "Such risks and uncertainties, many of which relate to matters beyond our control, could cause actual results to differ materially from these forward-looking statements.",
+        "Factors that might cause or contribute to such differences include, but are not limited to: failure to innovate effectively and meet customer needs; issues relating to development and use of AI; failure to compete effectively; damage to our reputation or brands; failure to realize the anticipated benefits of investments or acquisitions; service interruptions or failures in information technology systems by us or third parties; security incidents; failure to effectively develop, manage and maintain critical third-party business relationships; risks associated with being a multinational corporation and adverse macroeconomic conditions; complex sales cycles; failure to recruit and retain key personnel; litigation, regulatory inquiries and intellectual property infringement claims; changes in, and compliance with, global laws and regulations, including those related to information security and privacy; failure to protect our intellectual property; changes in tax regulations; complex government procurement processes; risks related to fluctuations in or the timing of revenue recognition from our subscription offerings; fluctuations in foreign currency exchange rates; impairment charges; our existing and future debt obligations; catastrophic events; and fluctuations in our stock price.",
+        "Further information on these and other factors are discussed in the section titled 'Risk Factors' in Adobe's most recently filed Annual Report on Form 10-K and Adobe's most recently filed Quarterly Reports on Form 10-Q.",
+        "The risks described in this press release and in Adobe's filings with the U.S.",
+        "Our renewal rates may decline or fluctuate as a result of a number of factors, including our customers' level of satisfaction, our ability to continue enhancing features and functionality, reliability of our offerings, prices of ours and competitors' offerings, the actual or perceived information security of our systems and services, decreases in the size of our customer base, changes as a result of regulatory or legal requirements, changes in the composition of our customer base and reductions in our customers' spending levels or declines in customer activity."
+      ],
+      "strategy_signals": [
+        "| 8 % | 9 % | 9 % | | | Product.................................................................................................",
+        "We maintain revenue reserves for rebates, rights of return and other limited price adjustments.",
+        "Distributors are allowed limited rights of return of products purchased during the previous quarter.",
+        "In addition, distributors are allowed to return products that have reached the end of their lives, as defined by us, and for products that are being replaced by new versions.",
+        "We offer rebates to our distributors, resellers and/or end-user customers.",
+        "Transaction price is reduced for these amounts based on actual performance against objectives set forth by us for a particular reporting period, such as volume and timely reporting."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": "outputs\\native_test\\sample_plots\\what_is_our_current_revenue_trend.png",
+    "evidence_support": {
+      "top_dense_score": 0.6845197081565857,
+      "query_overlap_ratio": 0.083
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 160,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 2887,
+        "output_tokens": 329,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2568,
+        "output_tokens": 234,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nRevenue is trending upward. The supplied series shows revenue rising from 5,182 in Q1FY24 to 5,873 in Q2FY25, a cumulative increase of 13.3%. The most recent quarter also increased from Q1FY25 (5,714) to Q2FY25 (5,873), indicating the upward trend is continuing.\n\n## Key Evidence\n- Revenue increased each quarter in the provided series: Q1FY24 5,182; Q2FY24 5,309; Q3FY24 5,408; Q4FY24 5,606; Q1FY25 5,714; Q2FY25 5,873.\n- The computed trend summary states revenue shows an upward trend from Q1FY24 to Q2FY25, a change of 13.3%.\n- The Q2FY25 earnings release says Adobe achieved record revenue of $5.87 billion in Q2FY25, representing 11% year-over-year growth as reported and in constant currency.\n\n## Sources\n- adobe_q2_fy2025_earnings_release.pdf | Second Quarter Fiscal Year 2025 Financial Highlights | pages n/a\n- adobe_q2_fy2025_earnings_release.pdf | Condensed Consolidated Statements of Income | pages n/a\n\n## Caveats\n- The evidence provided is quarterly only; no monthly or full-year trend series was supplied.\n- The 13.3% change is based on the computed facts series from Q1FY24 to Q2FY25, while the 11% figure is the company-reported year-over-year growth for Q2FY25 versus Q2FY24; these are different comparisons.\n- No segment-level or regional revenue trend data was provided, so this answer reflects total company revenue only.\n- The provided answer cites a quarterly revenue series (Q1FY24 5,182; Q2FY24 5,309; Q3FY24 5,408; Q4FY24 5,606; Q1FY25 5,714; Q2FY25 5,873) and a 13.3% cumulative increase, but none of those specific quarter-by-quarter revenue figures (for FY24 quarters and Q1FY25) appear in the supplied evidence.\n- Evidence does support that Q2FY25 revenue was $5.87B and that it was +11% year-over-year (source id 8), but it does not substantiate the full upward trend claim across the listed quarters.\n- The evidence includes a table snippet for Q1FY23–Q3FY23 (source id 1/2) and a partial income statement snippet for Q2FY25 vs Q2FY24 (source id 10), neither of which covers the full FY24→Q2FY25 sequence used in the answer."
+}

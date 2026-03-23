@@ -1,0 +1,235 @@
+{
+  "question": "What is our current revenue trend?",
+  "question_class": "trend_analysis",
+  "direct_answer": "Revenue is trending upward. Total revenue increased from 5.18 in Q1FY24 to 5.87 in Q2FY25, with steady quarter-over-quarter gains across the periods provided. The latest reported quarter (Q2FY25) was 5.87, up from 5.71 in Q1FY25, and Adobe reported 11% year-over-year growth for Q2FY25.",
+  "key_evidence": [
+    "Total revenue rose sequentially from Q1FY24 (5.18) to Q2FY24 (5.31), Q3FY24 (5.41), Q4FY24 (5.61), Q1FY25 (5.71), and Q2FY25 (5.87).",
+    "Computed trend summary shows total revenue increased 13.3% from Q1FY24 to Q2FY25.",
+    "Adobe’s Q2FY25 earnings release states revenue of $5.87 billion and 11% year-over-year growth.",
+    "Adobe’s Q3FY25 target revenue range is $5.875 billion to $5.925 billion, indicating management expects revenue to remain around the current level or slightly higher."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "**Adobe Investor Relations Data Sheet**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "c50a0c3d1e7842f7"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "**Second Quarter Fiscal Year 2025 Financial Highlights**",
+        "**Second Quarter Fiscal Year 2025 Business Segment Highlights**",
+        "**Financial Targets**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "eb13ca8af79ee0c0"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "**Second Quarter Fiscal Year 2025 Financial Highlights**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "97cca9915e5bfd97"
+    }
+  ],
+  "caveats": [
+    "The provided series covers six quarters, not a full four-quarter YoY bridge for every period.",
+    "The figures are presented in mixed formats (some as raw values, some as billions) but are directionally consistent.",
+    "No monthly revenue data was provided, so the trend assessment is quarterly only.",
+    "The provided evidence does not include the specific quarterly total revenue figures cited in the answer (e.g., Q1FY24=5.18, Q2FY24=5.31, Q3FY24=5.41, Q4FY24=5.61, Q1FY25=5.71, Q2FY25=5.87).",
+    "Evidence item 2 and 4 only show Total Revenue for Q1FY23–Q3FY23 (and segment revenue for those quarters), not the FY24/FY25 quarters referenced in the answer.",
+    "Evidence item 7 supports that Q2FY25 total revenue was $5.87B and 11% YoY growth, and evidence item 6 supports the Q3FY25 target range, but the rest of the sequential trend and computed 13.3% increase from Q1FY24 to Q2FY25 is not substantiated by the provided sources.",
+    "The answer’s claim of “steady quarter-over-quarter gains across the periods provided” relies on the missing quarterly data for FY24 and Q1FY25."
+  ],
+  "evidence_pack": [
+    {
+      "id": 2,
+      "object_id": "c50a0c3d1e7842f7",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "**Adobe Investor Relations Data Sheet**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "**Adobe Investor Relations Data Sheet**: Revenue<br>Cost of revenue<br>Gross profit: Q1FY23=4,655, Q2FY23=4,816, Q3FY23=4,890; Operating expenses: Q1FY23=2,501, Q2FY23=2,620, Q3FY23=2,613; Operating income: Q1FY23=1,586, Q2FY23=1,624, Q3FY23=1,697",
+      "score": 1.2121
+    },
+    {
+      "id": 6,
+      "object_id": "eb13ca8af79ee0c0",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "**Second Quarter Fiscal Year 2025 Financial Highlights**",
+        "**Second Quarter Fiscal Year 2025 Business Segment Highlights**",
+        "**Financial Targets**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "The following table summarizes Adobe's third quarter fiscal year 2025 targets, which assumes current macroeconomic conditions<sup>1</sup> | Total revenue | | \\$5.875 billion to \\$5.925 billion | | |-----------------------------------------|----------------------------------|------------------------------------|--| | Digital Media segment revenue | \\$4.37 billion to \\$4.40 billion | | | | Digital Experience segment revenue | \\$1.45 billion to \\$1.47 billion | | | | Digital Experience subscription revenue | \\$1.35 billion to \\$1.36 billion | | | | Earnings per share | GAAP: \\$4.00 to \\$4.05 | Non-GAAP: \\$5.15 to \\$5.20 | | : The following updated table summarizes Adobe's fiscal year 2025 targe",
+      "score": 0.7738
+    },
+    {
+      "id": 7,
+      "object_id": "97cca9915e5bfd97",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "**Second Quarter Fiscal Year 2025 Financial Highlights**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "- Adobe achieved record revenue of \\$5.87 billion in its second quarter of fiscal year 2025, which represents 11 percent year-over-year growth as reported and in constant currency. Diluted earnings per share was \\$3.94 on a GAAP basis and \\$5.06 on a non-GAAP basis. - GAAP operating income in the second quarter was \\$2.11 billion and non-GAAP operating income was \\$2.67 billion. GAAP net income was \\$1.69 billion and non-GAAP net income was \\$2.17 billion. - Cash flows from operations were \\$2.19 billion. - Exiting the quarter, Remaining Performance Obligations (\"RPO\") were \\$19.69 billion, and Current Remaining Performance Obligations (\"cRPO\") were 67 percent. - Adobe repurchased approximat",
+      "score": 0.6491
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "What is our current revenue trend?",
+        "question_class": "trend_analysis",
+        "lexical_query": "current revenue trend revenue trend last quarter last year monthly quarterly annual",
+        "semantic_query": "Determine the most recent direction and pattern of the company’s revenue over time (e.g., MoM/YoY/quarterly), including growth/decline and any inflection points.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "annual_report",
+          "quarterly_report",
+          "management_discussion",
+          "financial_statements"
+        ],
+        "target_metrics": [
+          "revenue",
+          "total revenue",
+          "net revenue",
+          "revenue growth rate",
+          "YoY revenue growth",
+          "QoQ revenue growth"
+        ],
+        "target_entities": [
+          "company",
+          "business segments",
+          "regions",
+          "product lines"
+        ],
+        "time_focus": "most recent 4 quarters (and latest available month/quarter)",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 171,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 72,
+      "chunk_hits": 8,
+      "table_hits": 46,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [
+        {
+          "label": "Total revenue",
+          "period": "Q1FY24",
+          "value": 5.18,
+          "raw_value": "5.18",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY24",
+          "value": 5.31,
+          "raw_value": "5.31",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q3FY24",
+          "value": 5.41,
+          "raw_value": "5.41",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q4FY24",
+          "value": 5.61,
+          "raw_value": "5.61",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q1FY25",
+          "value": 5.71,
+          "raw_value": "5.71",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY25",
+          "value": 5.87,
+          "raw_value": "5.87",
+          "page": null
+        }
+      ],
+      "trend_summary": "Total revenue shows an upward trend from Q1FY24 (5.18) to Q2FY25 (5.87), a change of 13.3%.",
+      "risk_factors": [
+        "Our renewal rates may decline or fluctuate as a result of a number of factors, including our customers' level of satisfaction, our ability to continue enhancing features and functionality, reliability of our offerings, prices of ours and competitors' offerings, the actual or perceived information security of our systems and services, decreases in the size of our customer base, changes as a result of regulatory or legal requirements, changes in the composition of our customer base and reductions in our customers' spending levels or declines in customer activity."
+      ],
+      "risk_signals": [
+        "Our renewal rates may decline or fluctuate as a result of a number of factors, including our customers' level of satisfaction, our ability to continue enhancing features and functionality, reliability of our offerings, prices of ours and competitors' offerings, the actual or perceived information security of our systems and services, decreases in the size of our customer base, changes as a result of regulatory or legal requirements, changes in the composition of our customer base and reductions in our customers' spending levels or declines in customer activity."
+      ],
+      "strategy_signals": [
+        "| (dollars in millions) | 2024 | 2023 | 2022 | % Change<br>2024-2023 | |-----------------------------|-----------|-----------|-----------|-----------------------| | Subscription | \\$ 20,521 | \\$ 18,284 | \\$ 16,388 | 12 % | | Percentage of total revenue | 95 % | 94 % | 93 % | | | Product | 386 | 460 | 532 | (16) % | | Percentage of total revenue | 2 % | 2 % | 3 % | | | Services and other<br> | 598 | 665 | 686 | (10) % | | Percentage of total revenue | 3 % | 4 % | 4 % | | | Total revenue | \\$ 21,505 | \\$ 19,409 | \\$ 17,606 | 11 % |",
+        "| (dollars in millions) | 2024 | 2023 | 2022 | % Change<br>2024-2023 | |-----------------------------|-------------|-------------|-------------|-----------------------| | Subscription | \\$<br>1,799 | \\$<br>1,822 | \\$<br>1,646 | (1) % | | Percentage of total revenue | 8 % | 9 % | 9 % | | | Product | 25 | 29 | 35 | (14) % | | Percentage of total revenue | * | * | * | | | Services and other<br> | 534 | 503 | 484 | 6 % | | Percentage of total revenue | 2 % | 3 % | 3 % | | | Total cost of revenue<br> | \\$<br>2,358 | \\$<br>2,354 | \\$<br>2,165 | * |",
+        "We maintain revenue reserves for rebates, rights of return and other limited price adjustments.",
+        "Distributors are allowed limited rights of return of products purchased during the previous quarter.",
+        "In addition, distributors are allowed to return products that have reached the end of their lives, as defined by us, and for products that are being replaced by new versions.",
+        "We offer rebates to our distributors, resellers and/or end-user customers."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": "outputs\\sample_plots\\what_is_our_current_revenue_trend.png",
+    "evidence_support": {
+      "top_dense_score": 0.6690645813941956,
+      "query_overlap_ratio": 0.167
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 171,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 3220,
+        "output_tokens": 320,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2891,
+        "output_tokens": 243,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nRevenue is trending upward. Total revenue increased from 5.18 in Q1FY24 to 5.87 in Q2FY25, with steady quarter-over-quarter gains across the periods provided. The latest reported quarter (Q2FY25) was 5.87, up from 5.71 in Q1FY25, and Adobe reported 11% year-over-year growth for Q2FY25.\n\n## Key Evidence\n- Total revenue rose sequentially from Q1FY24 (5.18) to Q2FY24 (5.31), Q3FY24 (5.41), Q4FY24 (5.61), Q1FY25 (5.71), and Q2FY25 (5.87).\n- Computed trend summary shows total revenue increased 13.3% from Q1FY24 to Q2FY25.\n- Adobe’s Q2FY25 earnings release states revenue of $5.87 billion and 11% year-over-year growth.\n- Adobe’s Q3FY25 target revenue range is $5.875 billion to $5.925 billion, indicating management expects revenue to remain around the current level or slightly higher.\n\n## Sources\n- adobe_q2_fy2025_investor_datasheet.pdf | **Adobe Investor Relations Data Sheet** | pages n/a\n- adobe_q2_fy2025_earnings_release.pdf | **Second Quarter Fiscal Year 2025 Financial Highlights** > **Second Quarter Fiscal Year 2025 Business Segment Highlights** > **Financial Targets** | pages n/a\n- adobe_q2_fy2025_earnings_release.pdf | **Second Quarter Fiscal Year 2025 Financial Highlights** | pages n/a\n\n## Caveats\n- The provided series covers six quarters, not a full four-quarter YoY bridge for every period.\n- The figures are presented in mixed formats (some as raw values, some as billions) but are directionally consistent.\n- No monthly revenue data was provided, so the trend assessment is quarterly only.\n- The provided evidence does not include the specific quarterly total revenue figures cited in the answer (e.g., Q1FY24=5.18, Q2FY24=5.31, Q3FY24=5.41, Q4FY24=5.61, Q1FY25=5.71, Q2FY25=5.87).\n- Evidence item 2 and 4 only show Total Revenue for Q1FY23–Q3FY23 (and segment revenue for those quarters), not the FY24/FY25 quarters referenced in the answer.\n- Evidence item 7 supports that Q2FY25 total revenue was $5.87B and 11% YoY growth, and evidence item 6 supports the Q3FY25 target range, but the rest of the sequential trend and computed 13.3% increase from Q1FY24 to Q2FY25 is not substantiated by the provided sources.\n- The answer’s claim of “steady quarter-over-quarter gains across the periods provided” relies on the missing quarterly data for FY24 and Q1FY25."
+}

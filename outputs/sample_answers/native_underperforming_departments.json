@@ -1,0 +1,243 @@
+{
+  "question": "Which departments are underperforming?",
+  "question_class": "risk_extraction",
+  "direct_answer": "The supplied evidence does not identify any departments as underperforming. It only shows company-level revenue growth and describes three reportable segments (Digital Media, Digital Experience, and Publishing and Advertising), but it does not provide segment-by-segment performance against targets or benchmarks for the latest periods.",
+  "key_evidence": [
+    "Total revenue increased from Q1FY24 (5.18) to Q2FY25 (5.8711), a 13.3% rise, which does not indicate company-wide underperformance.",
+    "The annual report says management reviews revenue and gross margin information for each reportable segment, but the provided evidence does not include the actual segment gross margin or revenue trend data needed to compare performance across segments.",
+    "The evidence lists the reportable segments: Digital Media, Digital Experience, and Publishing and Advertising, but no segment-level KPI results or target comparisons are provided."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": 1,
+      "page_end": 1,
+      "object_type": "table",
+      "object_id": "2ad437ea4348ff2b"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "Segment Information"
+      ],
+      "page_start": 65,
+      "page_end": 65,
+      "object_type": "chunk",
+      "object_id": "a61b6db52aed8d6a"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "NOTES TO CONSOLIDATED FINANCIAL STATEMENTS (Continued)"
+      ],
+      "page_start": 67,
+      "page_end": 68,
+      "object_type": "chunk",
+      "object_id": "6c65b35e3f95b297"
+    }
+  ],
+  "caveats": [
+    "No department-level or segment-level underperformance metric is available in the supplied evidence.",
+    "The question asks for departments, but the source material is organized by reportable segments rather than departments.",
+    "Without segment revenue/gross margin comparisons or explicit targets/benchmarks, any claim about underperforming departments would be speculative.",
+    "The provided evidence does not contain any explicit identification of underperforming departments (or any department-level performance vs targets).",
+    "The evidence references reportable segments (Digital Media, Digital Experience, Publishing and Advertising) and indicates management reviews revenue and gross margin by segment, but the excerpts shown do not provide segment-by-segment performance results or target/benchmark comparisons for the latest periods.",
+    "Because the evidence lacks the necessary underperformance criteria and data, the claim that “no departments are underperforming” is not directly supported; at most, it can be said that the evidence is insufficient to determine underperforming departments."
+  ],
+  "evidence_pack": [
+    {
+      "id": 1,
+      "object_id": "2ad437ea4348ff2b",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": 1,
+      "page_end": 1,
+      "quote": "Document Overview: Revenue ($Billions)Total Revenue: Q1FY23=4.66, Q2FY23=4.82, Q3FY23=4.89; Digital Media: Q1FY23=3.40, Q2FY23=3.51, Q3FY23=3.59; Digital Experience: Q1FY23=1.18, Q2FY23=1.22, Q3FY23=1.23",
+      "score": 1.1925
+    },
+    {
+      "id": 4,
+      "object_id": "a61b6db52aed8d6a",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "Segment Information"
+      ],
+      "page_start": 65,
+      "page_end": 65,
+      "quote": "We report segment information based on the “management” approach. The management approach designates the internal reporting used by management for making decisions and assessing performance as the source of our reportable segments. Our Chief Executive Officer, the chief operating decision maker, reviews revenue and gross margin information for each of our reportable segments, but does not review operating expenses on a segment by segment basis. In addition, with the exception of goodwill, we do not identify or allocate our assets by the reportable segments. Our business is organized into the following reportable segments: • Digital Media —Our Digital Media segment provides products and servi",
+      "score": 0.8342
+    },
+    {
+      "id": 5,
+      "object_id": "6c65b35e3f95b297",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "NOTES TO CONSOLIDATED FINANCIAL STATEMENTS (Continued)"
+      ],
+      "page_start": 67,
+      "page_end": 68,
+      "quote": "67 As of December 1, 2023 , the balance of deferred revenue was $5.95 billion . Significant movements in the deferred revenue balance during the period consisted of increases due to payments received prior to transfer of control of the underlying performance obligations to the customer, which were offset by decreases due to revenue recognized in the period. During the year ended November 29, 2024 , approximately $5.87 billion of revenue was recognized that was included in the balance of deferred revenue as of December 1, 2023. Transaction price allocated to remaining performance obligations represents contracted revenue that has not yet been recognized, which includes deferred revenue and un",
+      "score": 0.7997
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "Which departments are underperforming?",
+        "question_class": "risk_extraction",
+        "lexical_query": "departments underperforming KPI revenue performance variance",
+        "semantic_query": "Identify which departments are underperforming relative to targets/benchmarks using performance metrics (e.g., revenue, margin, SLA, productivity) and flag the lowest performers.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "annual_report",
+          "quarterly_report",
+          "kpi_dashboard",
+          "performance_review"
+        ],
+        "target_metrics": [
+          "revenue",
+          "gross margin",
+          "operating margin",
+          "cost efficiency",
+          "customer satisfaction (CSAT/NPS)",
+          "service level/SLA attainment (on-time delivery, response time)"
+        ],
+        "target_entities": [
+          "departments",
+          "business units",
+          "functions",
+          "teams"
+        ],
+        "time_focus": "latest 1-2 reporting periods (and trailing 12 months if available)",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 179,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 73,
+      "chunk_hits": 11,
+      "table_hits": 2,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [
+        {
+          "label": "Total revenue",
+          "period": "Q1FY24",
+          "value": 5.18,
+          "raw_value": "5.18",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY24",
+          "value": 5.31,
+          "raw_value": "5.31",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q3FY24",
+          "value": 5.41,
+          "raw_value": "5.41",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q4FY24",
+          "value": 5.61,
+          "raw_value": "5.61",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q1FY25",
+          "value": 5.71,
+          "raw_value": "5.71",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY25",
+          "value": 5.8711,
+          "raw_value": "5.8711",
+          "page": 1
+        }
+      ],
+      "trend_summary": "Total revenue shows an upward trend from Q1FY24 (5.18) to Q2FY25 (5.8711), a change of 13.3%.",
+      "risk_factors": [
+        "Our renewal rates may decline or fluctuate as a result of a number of factors, including our customers’ level of satisfaction, our ability to continue enhancing features and functionality, reliability of our offerings, prices of ours and competitors’ offerings, the actual or perceived information security of our systems and services, decreases in the size of our customer base, changes as a result of regulatory or legal requirements, changes in the composition of our customer base and reductions in our customers’ spending levels or declines in customer activity.",
+        "We attempt to mitigate a portion of these foreign currency exchange risks to our operating results through foreign currency hedging based on our judgment of the appropriate trade-offs among risk, opportunity and expense.",
+        "As a corporation with an extensive global footprint, we are subject to risks and exposures from the evolving macroeconomic environment, including the effects of increased global inflationary pressures and interest rates, fluctuations in foreign currency exchange rates, potential economic slowdowns or recessions and geopolitical pressures, including the unknown impacts of current and future trade regulations.",
+        "See the section titled “Risk Factors” in Part I, Item 1A of this report for further discussion of the possible impact of these macroeconomic issues on our business.",
+        "Our senior unsecured notes, commercial paper program and revolving credit agreement impose restrictions on us and require us to maintain compliance with specified covenants.",
+        "If we breach any of the covenants and do not obtain a waiver from the noteholders or lenders, then, subject to applicable cure periods, any outstanding debt may be declared immediately due and payable."
+      ],
+      "risk_signals": [
+        "Our renewal rates may decline or fluctuate as a result of a number of factors, including our customers’ level of satisfaction, our ability to continue enhancing features and functionality, reliability of our offerings, prices of ours and competitors’ offerings, the actual or perceived information security of our systems and services, decreases in the size of our customer base, changes as a result of regulatory or legal requirements, changes in the composition of our customer base and reductions in our customers’ spending levels or declines in customer activity.",
+        "We attempt to mitigate a portion of these foreign currency exchange risks to our operating results through foreign currency hedging based on our judgment of the appropriate trade-offs among risk, opportunity and expense.",
+        "As a corporation with an extensive global footprint, we are subject to risks and exposures from the evolving macroeconomic environment, including the effects of increased global inflationary pressures and interest rates, fluctuations in foreign currency exchange rates, potential economic slowdowns or recessions and geopolitical pressures, including the unknown impacts of current and future trade regulations.",
+        "See the section titled “Risk Factors” in Part I, Item 1A of this report for further discussion of the possible impact of these macroeconomic issues on our business.",
+        "Our senior unsecured notes, commercial paper program and revolving credit agreement impose restrictions on us and require us to maintain compliance with specified covenants.",
+        "If we breach any of the covenants and do not obtain a waiver from the noteholders or lenders, then, subject to applicable cure periods, any outstanding debt may be declared immediately due and payable."
+      ],
+      "strategy_signals": [
+        "Our business is organized into the following reportable segments: • Digital Media —Our Digital Media segment provides products and services that enable individuals, teams, businesses, and enterprises to create, publish and promote their content anywhere and accelerate their productivity by transforming how they view, share, engage with and collaborate on documents and creative content.",
+        "Our customers include creative professionals, including photographers, video editors, graphic and experience designers and game developers; communicators, including content creators, students, marketers and knowledge workers; and consumers.",
+        "• Digital Experience—Our Digital Experience segment provides an integrated platform and set of products, services and solutions that enable businesses to create, manage, execute, measure, monetize and optimize customer experiences that span from analytics to commerce.",
+        "Our customers include marketers, advertisers, agencies, publishers, merchandisers, merchants, web analysts, data scientists, developers and executives across the C-suite.",
+        "• Publishing and Advertising —Our Publishing and Advertising segment contains legacy products and services that address diverse market opportunities, including eLearning solutions, technical document publishing, web conferencing, document and forms platform, web app development, high-end printing and our Adobe Advertising offerings.",
+        "Significant movements in the deferred revenue balance during the period consisted of increases due to payments received prior to transfer of control of the underlying performance obligations to the customer, which were offset by decreases due to revenue recognized in the period."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": "outputs\\sample_plots\\which_departments_are_underperforming.png",
+    "evidence_support": {
+      "top_dense_score": 0.5462729334831238,
+      "query_overlap_ratio": 0.091
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 179,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 3009,
+        "output_tokens": 262,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2388,
+        "output_tokens": 143,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nThe supplied evidence does not identify any departments as underperforming. It only shows company-level revenue growth and describes three reportable segments (Digital Media, Digital Experience, and Publishing and Advertising), but it does not provide segment-by-segment performance against targets or benchmarks for the latest periods.\n\n## Key Evidence\n- Total revenue increased from Q1FY24 (5.18) to Q2FY25 (5.8711), a 13.3% rise, which does not indicate company-wide underperformance.\n- The annual report says management reviews revenue and gross margin information for each reportable segment, but the provided evidence does not include the actual segment gross margin or revenue trend data needed to compare performance across segments.\n- The evidence lists the reportable segments: Digital Media, Digital Experience, and Publishing and Advertising, but no segment-level KPI results or target comparisons are provided.\n\n## Sources\n- adobe_q2_fy2025_investor_datasheet.pdf | Document Overview | pages 1-1\n- adobe_fy2024_annual_report.pdf | ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA > Segment Information | pages 65-65\n- adobe_fy2024_annual_report.pdf | ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA > NOTES TO CONSOLIDATED FINANCIAL STATEMENTS (Continued) | pages 67-68\n\n## Caveats\n- No department-level or segment-level underperformance metric is available in the supplied evidence.\n- The question asks for departments, but the source material is organized by reportable segments rather than departments.\n- Without segment revenue/gross margin comparisons or explicit targets/benchmarks, any claim about underperforming departments would be speculative.\n- The provided evidence does not contain any explicit identification of underperforming departments (or any department-level performance vs targets).\n- The evidence references reportable segments (Digital Media, Digital Experience, Publishing and Advertising) and indicates management reviews revenue and gross margin by segment, but the excerpts shown do not provide segment-by-segment performance results or target/benchmark comparisons for the latest periods.\n- Because the evidence lacks the necessary underperformance criteria and data, the claim that “no departments are underperforming” is not directly supported; at most, it can be said that the evidence is insufficient to determine underperforming departments."
+}

@@ -1,0 +1,220 @@
+{
+  "question": "What is our current revenue trend?",
+  "question_class": "trend_analysis",
+  "direct_answer": "Revenue is trending upward. Total revenue increased from $5.18B in Q1FY24 to $5.87B in Q2FY25, with each reported quarter in the provided series higher than the prior one. The latest quarter (Q2FY25) was $5.8711B, up from $5.71B in Q1FY25, indicating continued growth momentum.",
+  "key_evidence": [
+    "Total revenue: Q1FY24 $5.18B, Q2FY24 $5.31B, Q3FY24 $5.41B, Q4FY24 $5.61B, Q1FY25 $5.71B, Q2FY25 $5.8711B.",
+    "Computed trend summary shows total revenue rose 13.3% from Q1FY24 to Q2FY25.",
+    "Adobe’s Q2FY25 earnings release says the company raised its FY25 total revenue target after strong first-half performance."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Financial Targets"
+      ],
+      "page_start": 2,
+      "page_end": 2,
+      "object_type": "chunk",
+      "object_id": "217a0b6f28b28634"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": 1,
+      "page_end": 1,
+      "object_type": "chunk",
+      "object_id": "f1456577c959ef4f"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Revenue and EPS Targets"
+      ],
+      "page_start": 1,
+      "page_end": 2,
+      "object_type": "chunk",
+      "object_id": "9d7dd5049e45d537"
+    }
+  ],
+  "caveats": [
+    "The provided data is quarterly only; no monthly trend or full trailing-twelve-month calculation was supplied beyond the quarterly series.",
+    "The latest quarter figure is from the investor datasheet; the earnings release provides forward-looking targets, not actual revenue.",
+    "Some source text includes revenue reserves/returns/rebates accounting language, which can affect recognized revenue, but no quantified impact is provided here."
+  ],
+  "evidence_pack": [
+    {
+      "id": 4,
+      "object_id": "217a0b6f28b28634",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Financial Targets"
+      ],
+      "page_start": 2,
+      "page_end": 2,
+      "quote": "The following table summarizes Adobe’s third quarter fiscal year 2025 targets, which assumes current macroeconomic conditions1: Total revenue $5.875 billion to $5.925 billion Digital Media segment revenue $4.37 billion to $4.40 billion Digital Experience segment revenue $1.45 billion to $1.47 billion Digital Experience subscription revenue $1.35 billion to $1.36 billion Earnings per share GAAP: $4.00 to $4.05 Non-GAAP: $5.15 to $5.20 1 Targets assume non-GAAP operating margin of ~45.5 percent, non-GAAP tax rate of ~18.5 percent and diluted share count of ~425 million for third quarter fiscal year 2025. The following updated table summarizes Adobe’s fiscal year 2025 targets, which assumes cur",
+      "score": 0.8342
+    },
+    {
+      "id": 6,
+      "object_id": "f1456577c959ef4f",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": 1,
+      "page_end": 1,
+      "quote": "Last Updated: June 12, 2025 Description Q1FY23Q2FY23Q3FY23Q4FY23FY2023Q1FY24Q2FY24Q3FY24Q4FY24FY2024Q1FY25Q2FY25FY25 YTD Revenue ($Billions)Total Revenue 4.66 4.82 4.89 5.05 19.41 5.18 5.31 5.41 5.61 21.51 5.71 5.8711.59 Digital Media 3.40 3.51 3.59 3.72 14.22 3.82 3.91 4.00 4.15 15.86 4.23 4.358.57 Digital Experience 1.18 1.22 1.23 1.27 4.89 1.29 1.33 1.35 1.40 5.37 1.41 1.462.87 Publishing and Advertising 0.08 0.08 0.07 0.07 0.30 0.08 0.07 0.06 0.07 0.28 0.07 0.070.14 Digital Media 73%73%74%74%73%74%74%74%74%74%74%74%74% Digital Experience 25%25%25%25%25%25%25%25%25%25%25%25%25% Publishing and Advertising 2%2%1%1%2%1%1%1%1%1%1%1%1%",
+      "score": 0.7841
+    },
+    {
+      "id": 7,
+      "object_id": "9d7dd5049e45d537",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Revenue and EPS Targets"
+      ],
+      "page_start": 1,
+      "page_end": 2,
+      "quote": "SAN JOSE, Calif. – June 12, 2025 – Adobe (Nasdaq:ADBE) today reported financial results for its second quarter fiscal year 2025 ended May 30, 2025. “Our strategy to deliver ground-breaking innovation for Business Professionals and Consumers, and Creative and Marketing Professionals is delighting customers and we are pleased to raise Adobe’s FY25 revenue target,” said Shantanu Narayen, chair and CEO, Adobe. “Adobe’s AI innovation is transforming industries enabling individuals and enterprises to achieve unprecedented levels of creativity.” “As a result of us driving strong performance in the first half of the year, we are pleased to raise Adobe’s FY25 total revenue and EPS targets,” said Dan ",
+      "score": 0.7242
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "What is our current revenue trend?",
+        "question_class": "trend_analysis",
+        "lexical_query": "current revenue trend revenue trendline last 12 months quarterly annual revenue growth",
+        "semantic_query": "Determine the most recent direction and momentum of company revenue (e.g., increasing/decreasing/flat) using the latest available quarterly and/or monthly revenue figures, including growth rates and any inflection points.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "annual_report",
+          "quarterly_report",
+          "management_discussion",
+          "financial_statements"
+        ],
+        "target_metrics": [
+          "revenue",
+          "total revenue",
+          "revenue growth rate",
+          "quarter-over-quarter revenue growth",
+          "year-over-year revenue growth",
+          "trailing twelve months (TTM) revenue"
+        ],
+        "target_entities": [
+          "company revenue",
+          "segment revenue (if applicable)"
+        ],
+        "time_focus": "latest available period through prior comparable periods (e.g., last 4 quarters / last 12 months)",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 192,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 68,
+      "chunk_hits": 9,
+      "table_hits": 2,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [
+        {
+          "label": "Total revenue",
+          "period": "Q1FY24",
+          "value": 5.18,
+          "raw_value": "5.18",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY24",
+          "value": 5.31,
+          "raw_value": "5.31",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q3FY24",
+          "value": 5.41,
+          "raw_value": "5.41",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q4FY24",
+          "value": 5.61,
+          "raw_value": "5.61",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q1FY25",
+          "value": 5.71,
+          "raw_value": "5.71",
+          "page": 1
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY25",
+          "value": 5.8711,
+          "raw_value": "5.8711",
+          "page": 1
+        }
+      ],
+      "trend_summary": "Total revenue shows an upward trend from Q1FY24 (5.18) to Q2FY25 (5.8711), a change of 13.3%.",
+      "risk_factors": [],
+      "risk_signals": [],
+      "strategy_signals": [
+        "We maintain revenue reserves for rebates, rights of return and other limited price adjustments.",
+        "Distributors are allowed limited rights of return of products purchased during the previous quarter.",
+        "In addition, distributors are allowed to return products that have reached the end of their lives, as defined by us, and for products that are being replaced by new versions.",
+        "We offer rebates to our distributors, resellers and/or end-user customers.",
+        "Transaction price is reduced for these amounts based on actual performance against objectives set forth by us for a particular reporting period, such as volume and timely reporting.",
+        "This estimate can be affected by the amount of a particular product in the channel, the rate of sell-through, product plans and other factors."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": "outputs\\sample_plots\\what_is_our_current_revenue_trend.png",
+    "evidence_support": {
+      "top_dense_score": 0.6445988416671753,
+      "query_overlap_ratio": 0.2
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 192,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 2459,
+        "output_tokens": 298,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2608,
+        "output_tokens": 164,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nRevenue is trending upward. Total revenue increased from $5.18B in Q1FY24 to $5.87B in Q2FY25, with each reported quarter in the provided series higher than the prior one. The latest quarter (Q2FY25) was $5.8711B, up from $5.71B in Q1FY25, indicating continued growth momentum.\n\n## Key Evidence\n- Total revenue: Q1FY24 $5.18B, Q2FY24 $5.31B, Q3FY24 $5.41B, Q4FY24 $5.61B, Q1FY25 $5.71B, Q2FY25 $5.8711B.\n- Computed trend summary shows total revenue rose 13.3% from Q1FY24 to Q2FY25.\n- Adobe’s Q2FY25 earnings release says the company raised its FY25 total revenue target after strong first-half performance.\n\n## Sources\n- adobe_q2_fy2025_earnings_release.pdf | Financial Targets | pages 2-2\n- adobe_q2_fy2025_investor_datasheet.pdf | Document Overview | pages 1-1\n- adobe_q2_fy2025_earnings_release.pdf | Revenue and EPS Targets | pages 1-2\n\n## Caveats\n- The provided data is quarterly only; no monthly trend or full trailing-twelve-month calculation was supplied beyond the quarterly series.\n- The latest quarter figure is from the investor datasheet; the earnings release provides forward-looking targets, not actual revenue.\n- Some source text includes revenue reserves/returns/rebates accounting language, which can affect recognized revenue, but no quantified impact is provided here."
+}

@@ -3,7 +3,8 @@ from pathlib import Path
 from leadership_agent.config import AppConfig, ParserSettings, RuntimeSettings
 from leadership_agent.indexing import build_indexes
 from leadership_agent.ingest import ingest_corpus
-from leadership_agent.retrieval import HybridRetriever
+from leadership_agent.models import QuestionPlan
+from leadership_agent.retrieval import HybridRetriever, QuestionClassifier
 
 
 def _make_config(tmp_path: Path) -> AppConfig:
@@ -49,3 +50,27 @@ Cybersecurity threats, privacy obligations, and platform resilience remain mater
     assert plan.prioritize_tables is True
     assert candidates
     assert any(candidate.object_type == "table" for candidate in candidates[:2])
+
+
+def test_high_confidence_underperforming_prompt_overrides_conflicting_llm_class(tmp_path: Path) -> None:
+    config = _make_config(tmp_path)
+    classifier = QuestionClassifier(config)
+    heuristic = classifier._heuristic_plan("Which departments are underperforming?")
+    conflicting = QuestionPlan(
+        question=heuristic.question,
+        question_class="risk_extraction",
+        lexical_query="risk query",
+        semantic_query="risk query",
+        prioritize_tables=False,
+        prioritize_latest=True,
+        prioritize_report_types=["annual_report"],
+        target_metrics=[],
+        target_entities=[],
+        time_focus=None,
+        widen_if_sparse=True,
+    )
+
+    resolved = classifier._apply_high_confidence_overrides(heuristic.question, heuristic, conflicting)
+
+    assert resolved.question_class == "comparison"
+    assert resolved.prioritize_tables is True

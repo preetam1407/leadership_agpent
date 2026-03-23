@@ -1,0 +1,196 @@
+{
+  "question": "Which departments are underperforming?",
+  "question_class": "risk_extraction",
+  "direct_answer": "The supplied evidence does not identify any departments as underperforming. It only shows company-level revenue and segment-level revenue mix (Digital Media and Digital Experience), plus a note that management reviews segment revenue and gross margin, but no department-level KPI/target comparisons or negative variance data are provided.",
+  "key_evidence": [
+    "The annual report says management reviews revenue and gross margin information for each reportable segment, but does not review operating expenses on a segment-by-segment basis.",
+    "The evidence provided includes revenue figures for subscription/product and segment revenue, but no department-level targets, benchmarks, or variance analysis.",
+    "No metric series or comparison rows were provided that would support identifying underperforming departments."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "ddae8d08e60fdb5e"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "Revenue"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "bd8edd89d2d86c64"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "NOTE 2. REVENUE",
+        "Segment Information"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "198951ad92511525"
+    }
+  ],
+  "caveats": [
+    "The company appears to report by segment rather than by department in the supplied materials.",
+    "Without department-level KPI attainment, budget, or target data, underperformance cannot be determined from the evidence provided."
+  ],
+  "evidence_pack": [
+    {
+      "id": 1,
+      "object_id": "ddae8d08e60fdb5e",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Document Overview: Revenue: Q1FY23=4,655, Q2FY23=4,816, Q3FY23=4,890; Cost of revenue: Q1FY23=568, Q2FY23=572, Q3FY23=580; Gross profit: Q1FY23=4,087, Q2FY23=4,244, Q3FY23=4,310",
+      "score": 1.2374
+    },
+    {
+      "id": 3,
+      "object_id": "af06910a72d74750",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Document Overview: Total Revenue: Q1FY23=4.66, Q2FY23=4.82, Q3FY23=4.89; Digital Media: Q1FY23=3.40, Q2FY23=3.51, Q3FY23=3.59; Digital Experience: Q1FY23=1.18, Q2FY23=1.22, Q3FY23=1.23",
+      "score": 1.1054
+    },
+    {
+      "id": 5,
+      "object_id": "bd8edd89d2d86c64",
+      "object_type": "table",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "Revenue"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "| (dollars in millions) | 2024 | 2023 | 2022 | % Change 2024-2023 | |----------------------------------------------------------------------------------------------------------|----------|----------|----------|----------------------| | Subscription......................................................................................... | $ 20,521 | $ 18,284 | $ 16,388 | 12 % | | Percentage of total revenue............................................................... | 95 % | 94 % | 93 % | | | Product................................................................................................. | 386 | 460 | 532 | (16)% | | Percentage of total revenue.......................................",
+      "score": 0.7198
+    },
+    {
+      "id": 7,
+      "object_id": "198951ad92511525",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "NOTE 2. REVENUE",
+        "Segment Information"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "We report segment information based on the 'management' approach. The management approach designates the internal reporting used by management for making decisions and assessing performance as the source of our reportable segments. Our Chief Executive Officer, the chief operating decision maker, reviews revenue and gross margin information for each of our reportable segments, but does not review operating expenses on a segment by segment basis. In addition, with the exception of goodwill, we do not identify or allocate our assets by the reportable segments. Our business is organized into the following reportable segments: - Digital Media -Our Digital Media segment provides products and servi",
+      "score": 0.619
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "Which departments are underperforming?",
+        "question_class": "risk_extraction",
+        "lexical_query": "departments underperforming KPI revenue performance variance underperforming",
+        "semantic_query": "Identify which departments are underperforming relative to targets or benchmarks using KPI/revenue performance data; include magnitude and drivers if available.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "annual_report",
+          "quarterly_report",
+          "kpi_dashboard",
+          "performance_review"
+        ],
+        "target_metrics": [
+          "department revenue",
+          "department profit/margin",
+          "department KPI attainment rate",
+          "cost vs budget",
+          "service level/SLA attainment",
+          "growth rate vs target"
+        ],
+        "target_entities": [
+          "departments",
+          "business units",
+          "cost centers"
+        ],
+        "time_focus": "latest 1-2 reporting periods (and trailing 12 months if available)",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 165,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 75,
+      "chunk_hits": 8,
+      "table_hits": 48,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [],
+      "trend_summary": null,
+      "risk_factors": [
+        "We attempt to mitigate a portion of these foreign currency exchange risks to our operating results through foreign currency hedging based on our judgment of the appropriate trade-offs among risk, opportunity and expense."
+      ],
+      "risk_signals": [
+        "We attempt to mitigate a portion of these foreign currency exchange risks to our operating results through foreign currency hedging based on our judgment of the appropriate trade-offs among risk, opportunity and expense."
+      ],
+      "strategy_signals": [
+        "| | Number of Shares (in millions) | Weighted Average Grant Date Fair Value | Aggregate Fair Value (1) (in millions) | Weighted Average Remaining Contractual Life (years) | |---------------------------------------------------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------|-------------------------------------------------------| | Beginning outstanding balance .........................................",
+        "| 8 % | 9 % | 9 % | | | Product.................................................................................................",
+        "| 95 % | 94 % | 93 % | | | Product.................................................................................................",
+        "Significant movements in the deferred revenue balance during the period consisted of increases due to payments received prior to transfer of control of the underlying performance obligations to the customer, which were offset by decreases due to revenue recognized in the period.",
+        "Transaction price allocated to remaining performance obligations represents contracted revenue that has not yet been recognized, which includes deferred revenue and unbilled amounts that will be recognized as revenue in future periods.",
+        "Transaction price allocated to remaining performance obligations is influenced by several factors, including the timing of renewals and average contract term."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": null,
+    "evidence_support": {
+      "top_dense_score": 0.6146636009216309,
+      "query_overlap_ratio": 0.0
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 165,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 2080,
+        "output_tokens": 203,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2265,
+        "output_tokens": 82,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nThe supplied evidence does not identify any departments as underperforming. It only shows company-level revenue and segment-level revenue mix (Digital Media and Digital Experience), plus a note that management reviews segment revenue and gross margin, but no department-level KPI/target comparisons or negative variance data are provided.\n\n## Key Evidence\n- The annual report says management reviews revenue and gross margin information for each reportable segment, but does not review operating expenses on a segment-by-segment basis.\n- The evidence provided includes revenue figures for subscription/product and segment revenue, but no department-level targets, benchmarks, or variance analysis.\n- No metric series or comparison rows were provided that would support identifying underperforming departments.\n\n## Sources\n- adobe_q2_fy2025_investor_datasheet.pdf | Document Overview | pages n/a\n- adobe_fy2024_annual_report.pdf | Revenue | pages n/a\n- adobe_fy2024_annual_report.pdf | NOTE 2. REVENUE > Segment Information | pages n/a\n\n## Caveats\n- The company appears to report by segment rather than by department in the supplied materials.\n- Without department-level KPI attainment, budget, or target data, underperformance cannot be determined from the evidence provided."
+}

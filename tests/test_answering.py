@@ -79,6 +79,28 @@ Digital Experience 1.40 1.41 1.45
     assert "digital experience" in lowered
 
 
+def test_underperforming_departments_ignores_immaterial_residual_row(tmp_path: Path) -> None:
+    config = _make_config(tmp_path)
+    (config.raw_data_dir / "segments.txt").write_text(
+        """
+[PAGE 1]
+Business Segments
+Description Q4FY24 Q1FY25 Q2FY25
+Digital Media 4.15 4.23 4.36
+Digital Experience 1.40 1.41 1.46
+Publishing and Advertising 0.07 0.07 0.07
+""".strip(),
+        encoding="utf-8",
+    )
+    agent = LeadershipAgent(config)
+    agent.ingest()
+    agent.build_index()
+    report = agent.ask("Which departments are underperforming?")
+    lowered = report.direct_answer.lower()
+    assert "digital experience" in lowered
+    assert "publishing and advertising" not in lowered
+
+
 def test_trend_answer_from_markdown_table(tmp_path: Path) -> None:
     config = _make_config(tmp_path)
     (config.raw_data_dir / "datasheet.md").write_text(

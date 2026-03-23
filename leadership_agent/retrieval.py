@@ -89,7 +89,22 @@ class QuestionClassifier:
             time_focus=parsed.get("time_focus", heuristic.time_focus),
             widen_if_sparse=bool(parsed.get("widen_if_sparse", heuristic.widen_if_sparse)),
         )
+        plan = self._apply_high_confidence_overrides(question, heuristic, plan)
         return plan, usage
+
+    def _apply_high_confidence_overrides(self, question: str, heuristic: QuestionPlan, llm_plan: QuestionPlan) -> QuestionPlan:
+        q = question.lower()
+        high_confidence_class = None
+        if any(token in q for token in ["underperform", "underperforming", "lagging", "weakest", "versus", "compare"]):
+            high_confidence_class = "comparison"
+        elif any(token in q for token in ["trend", "trajectory", "over time", "yoy", "qoq"]):
+            high_confidence_class = "trend_analysis"
+        elif any(token in q for token in ["risk", "risks", "headwind", "highlighted", "cybersecurity"]):
+            high_confidence_class = "risk_extraction"
+
+        if high_confidence_class and llm_plan.question_class != high_confidence_class:
+            return heuristic
+        return llm_plan
 
     def _heuristic_plan(self, question: str) -> QuestionPlan:
         q = question.lower()

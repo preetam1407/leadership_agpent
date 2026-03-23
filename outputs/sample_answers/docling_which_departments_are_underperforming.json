@@ -1,0 +1,266 @@
+{
+  "question": "Which departments are underperforming?",
+  "question_class": "comparison",
+  "direct_answer": "Digital Experience appears to be underperforming relative to Digital Media, with 4.3% change from Q4FY24 to Q2FY25 versus 4.8%.",
+  "key_evidence": [
+    "Digital Experience moved from 1.40 in Q4FY24 to 1.46 in Q2FY25 (+4.3%).",
+    "Digital Media moved from 4.15 in Q4FY24 to 4.35 in Q2FY25 (+4.8%)."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "af06910a72d74750"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Financial Targets"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "f2d66cdb60fc4acd"
+    }
+  ],
+  "caveats": [
+    "The question asks which departments are underperforming, but the supplied data is organized by business segments rather than departments.",
+    "No explicit benchmark, target, or peer comparison is provided to define 'underperforming.'",
+    "Publishing and Advertising appears small and flat in the table, but the evidence is insufficient to conclude underperformance without a year-over-year comparison."
+  ],
+  "evidence_pack": [
+    {
+      "id": 1,
+      "object_id": "af06910a72d74750",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Document Overview: Total Revenue: Q1FY23=4.66, Q2FY23=4.82, Q3FY23=4.89; Digital Media: Q1FY23=3.40, Q2FY23=3.51, Q3FY23=3.59; Digital Experience: Q1FY23=1.18, Q2FY23=1.22, Q3FY23=1.23",
+      "score": 1.4534
+    },
+    {
+      "id": 2,
+      "object_id": "ddae8d08e60fdb5e",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Document Overview: Revenue: Q1FY23=4,655, Q2FY23=4,816, Q3FY23=4,890; Cost of revenue: Q1FY23=568, Q2FY23=572, Q3FY23=580; Gross profit: Q1FY23=4,087, Q2FY23=4,244, Q3FY23=4,310",
+      "score": 1.4325
+    },
+    {
+      "id": 3,
+      "object_id": "f2f15095da7ba3f3",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Second Quarter Fiscal Year 2025 Business Segment Highlights"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "- Digital Media segment revenue was $4.35 billion, which represents 11 percent year-over-year growth, or 12 percent in constant currency. Digital Media Annualized Recurring Revenue ('ARR') exiting the quarter was $18.09 billion, representing 12.1 percent year-over-year growth. - Digital Experience segment revenue was $1.46 billion, representing 10 percent year-over-year growth as reported and in constant currency. Digital Experience subscription revenue was $1.33 billion, representing 11 percent year-over-year growth as reported and in constant currency.",
+      "score": 1.2
+    },
+    {
+      "id": 4,
+      "object_id": "87c9be83a4415e86",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Financial Targets"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "The following table summarizes Adobe's third quarter fiscal year 2025 targets, which assumes current macroeconomic conditions 1 : | Total revenue | $5.875 billion to $5.925 billion | $5.875 billion to $5.925 billion | |-----------------------------------------|------------------------------------|------------------------------------| | Digital Media segment revenue | $4.37 billion to $4.40 billion | $4.37 billion to $4.40 billion | | Digital Experience segment revenue | $1.45 billion to $1.47 billion | $1.45 billion to $1.47 billion | | Digital Experience subscription revenue | $1.35 billion to $1.36 billion | $1.35 billion to $1.36 billion | | Earnings per share | GAAP: $4.00 to $4.05 | Non",
+      "score": 0.8872
+    },
+    {
+      "id": 5,
+      "object_id": "229faa198b91f8a6",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "<!-- image --> | | Description | Q1FY23 | Q2FY23 | Q3FY23 | Q4FY23 | FY2023 | Q1FY24 | Q2FY24 | Q3FY24 | Q4FY24 | FY2024 | Q1FY25 | Q2FY25 | FY25 YTD | |-----------------------------------------------|------------------------------------------------------------------------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|------------| | Revenue ($Billions) | Total Revenue | 4.66 | 4.82 | 4.89 | 5.05 | 19.41 | 5.18 | 5.31 | 5.41 | 5.61 | 21.51 | 5.71 | 5.87 | 11.59 | | Revenue by Segment ($Billions) | Digital Media | 3.40 | 3.51 | 3.59 | 3.72 | 14.22 | 3.82 | 3.91 | 4.00 | 4.15 | 15.86 | 4.23 | 4.35",
+      "score": 0.7156
+    },
+    {
+      "id": 6,
+      "object_id": "b90f76f25c214123",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Customer Group Supplemental Disclosure"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "- Business Professionals and Consumers Group subscription revenue was $1.60 billion, which represents 15 percent year-over-year growth as reported and in constant currency. - Creative and Marketing Professionals Group subscription revenue was $4.02 billion, which represents 10 percent year-over-year growth, or 11 percent in constant currency.",
+      "score": 0.7141
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "Which departments are underperforming?",
+        "question_class": "comparison",
+        "lexical_query": "Which departments are underperforming? segment performance compare table department division business unit segment year-over-year growth revenue by segment",
+        "semantic_query": "Which departments are underperforming? segment performance compare table department division business unit segment year-over-year growth revenue by segment",
+        "prioritize_tables": true,
+        "prioritize_latest": false,
+        "prioritize_report_types": [
+          "investor_datasheet",
+          "quarterly_report"
+        ],
+        "target_metrics": [
+          "revenue"
+        ],
+        "target_entities": [],
+        "time_focus": null,
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 177,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb"
+      ],
+      "section_hits": 21,
+      "chunk_hits": 11,
+      "table_hits": 14,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [
+        {
+          "label": "Total revenue",
+          "period": "Q1FY24",
+          "value": 5.18,
+          "raw_value": "5.18",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY24",
+          "value": 5.31,
+          "raw_value": "5.31",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q3FY24",
+          "value": 5.41,
+          "raw_value": "5.41",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q4FY24",
+          "value": 5.61,
+          "raw_value": "5.61",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q1FY25",
+          "value": 5.71,
+          "raw_value": "5.71",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY25",
+          "value": 5.87,
+          "raw_value": "5.87",
+          "page": null
+        }
+      ],
+      "trend_summary": "Total revenue shows an upward trend from Q1FY24 (5.18) to Q2FY25 (5.87), a change of 13.3%.",
+      "risk_factors": [],
+      "risk_signals": [],
+      "strategy_signals": [
+        "- Digital Media segment revenue was $4.35 billion, which represents 11 percent year-over-year growth, or 12 percent in constant currency.",
+        "Digital Media Annualized Recurring Revenue ('ARR') exiting the quarter was $18.09 billion, representing 12.1 percent year-over-year growth.",
+        "- Digital Experience segment revenue was $1.46 billion, representing 10 percent year-over-year growth as reported and in constant currency.",
+        "Digital Experience subscription revenue was $1.33 billion, representing 11 percent year-over-year growth as reported and in constant currency.",
+        "The following table summarizes Adobe's third quarter fiscal year 2025 targets, which assumes current macroeconomic conditions 1 : | Total revenue | $5.875 billion to $5.925 billion | $5.875 billion to $5.925 billion | |-----------------------------------------|------------------------------------|------------------------------------| | Digital Media segment revenue | $4.37 billion to $4.40 billion | $4.37 billion to $4.40 billion | | Digital Experience segment revenue | $1.45 billion to $1.47 billion | $1.45 billion to $1.47 billion | | Digital Experience subscription revenue | $1.35 billion to $1.36 billion | $1.35 billion to $1.36 billion | | Earnings per share | GAAP: $4.00 to $4.05 | Non-GAAP: $5.15 to $5.20 | The following updated table summarizes Adobe's fiscal year 2025 targets, which assumes current macroeconomic conditions 2 : | Total revenue | $23.50 billion to $23.60 billion | $23.50 billion to $23.60 billion | |-----------------------------------------|------------------------------------|------------------------------------| | Digital Media segment revenue | $17.45 billion to $17.50 billion | $17.45 billion to $17.50 billion | | Digital Media ending ARR growth | 11.0% year over year | 11.0% year over year | | Digital Experience segment revenue | $5.80 billion to $5.90 billion | $5.80 billion to $5.90 billion | | Digital Experience subscription revenue | $5.375 billion to $5.425 billion | $5.375 billion to $5.425 billion | | Earnings per share | GAAP: $16.30 to $16.50 | Non-GAAP: $20.50 to $20.70 |",
+        "<!-- image --> | | Description | Q1FY23 | Q2FY23 | Q3FY23 | Q4FY23 | FY2023 | Q1FY24 | Q2FY24 | Q3FY24 | Q4FY24 | FY2024 | Q1FY25 | Q2FY25 | FY25 YTD | |-----------------------------------------------|------------------------------------------------------------------------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|------------| | Revenue ($Billions) | Total Revenue | 4.66 | 4.82 | 4.89 | 5.05 | 19.41 | 5.18 | 5.31 | 5.41 | 5.61 | 21.51 | 5.71 | 5.87 | 11.59 | | Revenue by Segment ($Billions) | Digital Media | 3.40 | 3.51 | 3.59 | 3.72 | 14.22 | 3.82 | 3.91 | 4.00 | 4.15 | 15.86 | 4.23 | 4.35 | 8.57 | | Revenue by Segment ($Billions) | Digital Experience | 1.18 | 1.22 | 1.23 | 1.27 | 4.89 | 1.29 | 1.33 | 1.35 | 1.40 | 5.37 | 1.41 | 1.46 | 2.87 | | Revenue by Segment ($Billions) | Publishing and Advertising | 0.08 | 0.08 | 0.07 | 0.07 | 0.30 | 0.08 | 0.07 | 0.06 | 0.07 | 0.28 | 0.07 | 0.07 | 0.14 | | Revenue by Segment (as %of total revenue) | Digital Media | 73% | 73% | 74% | 74% | 73% | 74% | 74% | 74% | 74% | 74% | 74% | 74% | 74% | | Revenue by Segment (as %of total revenue) | Digital Experience | 25% | 25% | 25% | 25% | 25% | 25% | 25% | 25% | 25% | 25% | 25% | 25% | 25% | | Revenue by Segment (as %of total revenue) | Publishing and Advertising | 2% | 2% | 1% | 1% | 2% | 1% | 1% | 1% | 1% | 1% | 1% | 1% | 1% | | Supplementary Segment Data ($Billions) | Digital Experience | | | | | | | | | | | | | | | | Digital Experience Subscription Revenue 1 | 1.04 | 1.07 | 1.10 | 1.12 | 4.33 | 1.16 | 1.20 | 1.23 | 1.27 | 4.86 | 1.30 | 1.33 | 2.63 | | | Digital Experience Subscription Revenue 1 Y/Y% | 12% | 11% | 12% | 12% | 12% | 12% | 13% | 12% | 13% | 12% | 11% | 11% | 11% | | | Digital Media Total Digital Media ARR 2 - Updated for December 2022 Currency Rates | 13.67 | 14.14 | 14.60 | 15.17 | - | - | - | - | - | - | - | - | - | | | Total Digital Media ARR 2 - Updated for December 2023 Currency Rates | - | - | - | 15.33 | - | 15.76 | 16.25 | 16.76 | 17.33 | - | - | - | - | | | Total Digital Media ARR 2 - Updated for December 2024 Currency Rates | - | - | - | - | - | 15.66 | 16.14 | 16.64 | 17.22 | - | 17.63 | 18.09 | - | | | Total Digital Media ARR 2 Y/Y% | - | - | - | - | - | - | - | - | - | - | 12.6% | 12.1% | - | | Supplementary Customer Group Data ($Billions) | Subscription Revenue 1 Creative & Marketing Professionals subscription revenue 3 | 3.26 | 3.33 | 3.38 | 3.45 | 13.43 | 3.55 | 3.64 | 3.72 | 3.84 | 14.75 | 3.92 | 4.02 | 7.94 | | Supplementary Customer Group Data ($Billions) | Business Professionals & Consumers subscription revenue 4 | 1.08 | 1.16 | 1.22 | 1.29 | 4.74 | 1.34 | 1.39 | 1.44 | 1.50 | 5.66 | 1.53 | 1.60 | 3.13 | | Supplementary Customer Group Data ($Billions) | Digital Media + Digital Experience subscription revenue | 4.34 | 4.49 | 4.60 | 4.74 | 18.17 | 4.89 | 5.03 | 5.15 | 5.34 | 20.41 | 5.46 | 5.61 | 11.07 | | Remaining Performance Obligations | Remaining Performance Obligations ($Billions) | 15.21 | 15.22 | 15.72 | 17.22 | - | 17.58 | 17.86 | 18.14 | 19.96 | - | 19.69 | 19.69 | - | | Remaining Performance Obligations | Current Remaining Performance Obligations 5 | 73% | 72% | 71% | 69% | - | 68% | 68% | 69% | 67% | - | 67% | 67% | - | | Revenue by Geography (as %of total revenue) | Americas | 60% | 60% | 60% | 61% | 60% | 60% | 60% | 60% | 60% | 60% | 60% | 60% | 60% | | | EMEA | 25% | 25% | 25% | 25% | 25% | 25% | 26% | 26% | 26% | 26% | 26% | 26% | 26% | | | Asia | 15% | 15% | 15% | 14% | 15% | 15% | 14% | 14% | 14% | 14% | 14% | 14% | 14% | | | Digital Media | 0.14 | 0.15 | 0.16 | 0.21 | 0.67 | 0.17 | 0.18 | 0.14 | 0.19 | 0.68 | 0.20 | 0.21 | 0.41 | | Supplementary Cost | Digital Experience | 0.40 | 0.40 | 0.40 | 0.40 | 1.60 | 0.40 | 0.40 | 0.40 | 0.40 | 1.59 | 0.40 | 0.41 | 0.81 | | of Revenue Data ($Billions) | Publishing and Advertising | 0.02 | 0.02 | 0.02 | 0.02 | 0.09 | 0.02 | 0.02 | 0.02 | 0.02 | 0.09 | 0.02 | 0.02 | 0.04 | | of Revenue Data ($Billions) | Total | 0.57 | 0.57 | 0.58 | 0.63 | 2.35 | 0.59 | 0.60 | 0.55 | 0.62 | 2.36 | 0.62 | 0.64 | 1.26 | | | Worldwide Employees | 29,328 | 30,078 | 30,007 | 29,945 | - | 30,076 | 31,020 | 30,830 | 30,709 | - | 30,817 | 31,847 | - | | Other Data | Diluted Shares Outstanding (Millions) | 460 | 459 | 459 | 459 | 459 | 456 | 451 | 448 | 443 | 450 | 438 | 429 | 433 | 1 Subscription revenue primarily includes revenue from SaaS, managed service and term offerings."
+      ],
+      "comparison_rows": [
+        {
+          "label": "Digital Experience",
+          "period": "Q2FY25",
+          "value": 1.46,
+          "raw_value": "1.46",
+          "start_period": "Q4FY24",
+          "start_raw": "1.40",
+          "end_period": "Q2FY25",
+          "end_raw": "1.46",
+          "end_value": 1.46,
+          "growth_pct": 4.28571428571429,
+          "period_count": 3,
+          "summary": "Digital Experience moved from 1.40 in Q4FY24 to 1.46 in Q2FY25 (+4.3%)."
+        },
+        {
+          "label": "Digital Media",
+          "period": "Q2FY25",
+          "value": 4.35,
+          "raw_value": "4.35",
+          "start_period": "Q4FY24",
+          "start_raw": "4.15",
+          "end_period": "Q2FY25",
+          "end_raw": "4.35",
+          "end_value": 4.35,
+          "growth_pct": 4.819277108433717,
+          "period_count": 3,
+          "summary": "Digital Media moved from 4.15 in Q4FY24 to 4.35 in Q2FY25 (+4.8%)."
+        }
+      ]
+    },
+    "plot_path": "outputs\\sample_plots\\which_departments_are_underperforming.png",
+    "evidence_support": {
+      "top_dense_score": 0.679122269153595,
+      "query_overlap_ratio": 0.333
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 177,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 4966,
+        "output_tokens": 300,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2557,
+        "output_tokens": 136,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nDigital Experience appears to be underperforming relative to Digital Media, with 4.3% change from Q4FY24 to Q2FY25 versus 4.8%.\n\n## Key Evidence\n- Digital Experience moved from 1.40 in Q4FY24 to 1.46 in Q2FY25 (+4.3%).\n- Digital Media moved from 4.15 in Q4FY24 to 4.35 in Q2FY25 (+4.8%).\n\n## Sources\n- adobe_q2_fy2025_investor_datasheet.pdf | Document Overview | pages n/a\n- adobe_q2_fy2025_earnings_release.pdf | Financial Targets | pages n/a\n\n## Caveats\n- The question asks which departments are underperforming, but the supplied data is organized by business segments rather than departments.\n- No explicit benchmark, target, or peer comparison is provided to define 'underperforming.'\n- Publishing and Advertising appears small and flat in the table, but the evidence is insufficient to conclude underperformance without a year-over-year comparison."
+}

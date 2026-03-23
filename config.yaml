@@ -3,24 +3,20 @@ parsed_data_dir: data/parsed
 index_dir: data/indexes
 output_dir: outputs
 eval_questions_path: data/eval/questions.json
-
 parser:
   primary: docling
   fallback: marker
   persist_markdown: true
   allow_native_fallback: true
   quality_min_score: 0.55
-
 models:
   nano: gpt-5.4-nano
   mini: gpt-5.4-mini
   embedding: BAAI/bge-small-en-v1.5
   embedding_batch_size: 32
-
 chunking:
   max_tokens: 650
   overlap_tokens: 80
-
 retrieval:
   top_sections: 8
   top_chunks: 8
@@ -31,14 +27,12 @@ retrieval:
   latest_doc_bonus: 0.12
   table_priority_bonus: 0.15
   search_multiplier: 6
-
 answer:
   max_context_items: 10
   require_citations: true
-  insufficient_evidence_threshold: 0.20
-
+  insufficient_evidence_threshold: 0.2
 runtime:
   llm_provider: openai
-  openai_api_key: ""
+  openai_api_key: ''
   openai_base_url: https://api.openai.com/v1
   llm_timeout_sec: 60

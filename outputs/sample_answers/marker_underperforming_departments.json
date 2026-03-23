@@ -1,0 +1,288 @@
+{
+  "question": "Which departments are underperforming?",
+  "question_class": "risk_extraction",
+  "direct_answer": "The supplied evidence does not identify any underperforming departments. It only shows Adobe’s overall revenue trend is increasing and provides segment-level context for Digital Media and Digital Experience, but no department-by-department KPI comparison against targets or benchmarks.",
+  "key_evidence": [
+    "Total revenue increased from 5.18 in Q1FY24 to 5.87 in Q2FY25, a 13.3% rise, which does not indicate overall underperformance.",
+    "Adobe’s reportable segments are described, including Digital Media and Digital Experience, but the evidence provided does not include segment-level underperformance metrics or target comparisons.",
+    "The annual report states management reviews revenue and gross margin information for each reportable segment, but the supplied excerpts do not include those segment results or any variance-to-target analysis."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "*Our intellectual property portfolio is a valuable asset and we may not be able to protect our intellectual property rights, including our source code, from infringement or unauthorized copying, use or disclosure.*",
+        "| Digital Media ARR | Creative ARR<br>+<br>Document Cloud ARR |",
+        "**Revenue**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "441bf2d81022e7e4"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "*Our intellectual property portfolio is a valuable asset and we may not be able to protect our intellectual property rights, including our source code, from infringement or unauthorized copying, use or disclosure.*",
+        "*We are subject to fluctuations in foreign currency exchange rates and may not be able to effectively hedge our exposure.*"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "12d7ab01833e3b47"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Last Updated: June 12, 2025",
+        "**Adobe Investor Relations Data Sheet**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "table",
+      "object_id": "26f4eb78380acd37"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ADOBE INC. CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY",
+        "(In millions)",
+        "**NOTE 2. REVENUE**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "20f11cc621d49d26"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ADOBE INC. CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY",
+        "(In millions)",
+        "**NOTES TO CONSOLIDATED FINANCIAL STATEMENTS (Continued)**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "2d5d979d879b07c9"
+    }
+  ],
+  "caveats": [
+    "No department-level KPI table, benchmark, or target-versus-actual comparison was provided.",
+    "The evidence is mostly company-wide or segment-level, not department-level.",
+    "Without explicit performance thresholds or comparative metrics, underperforming departments cannot be reliably identified from the supplied material."
+  ],
+  "evidence_pack": [
+    {
+      "id": 2,
+      "object_id": "441bf2d81022e7e4",
+      "object_type": "table",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "*Our intellectual property portfolio is a valuable asset and we may not be able to protect our intellectual property rights, including our source code, from infringement or unauthorized copying, use or disclosure.*",
+        "| Digital Media ARR | Creative ARR<br>+<br>Document Cloud ARR |",
+        "**Revenue**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "| (dollars in millions) | 2024 | 2023 | 2022 | % Change<br>2024-2023 | |-----------------------------|-----------|-----------|-----------|-----------------------| | Subscription | \\$ 20,521 | \\$ 18,284 | \\$ 16,388 | 12 % | | Percentage of total revenue | 95 % | 94 % | 93 % | | | Product | 386 | 460 | 532 | (16) % | | Percentage of total revenue | 2 % | 2 % | 3 % | | | Services and other<br> | 598 | 665 | 686 | (10) % | | Percentage of total revenue | 3 % | 4 % | 4 % | | | Total revenue | \\$ 21,505 | \\$ 19,409 | \\$ 17,606 | 11 % |",
+      "score": 1.1037
+    },
+    {
+      "id": 5,
+      "object_id": "12d7ab01833e3b47",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "*Our intellectual property portfolio is a valuable asset and we may not be able to protect our intellectual property rights, including our source code, from infringement or unauthorized copying, use or disclosure.*",
+        "*We are subject to fluctuations in foreign currency exchange rates and may not be able to effectively hedge our exposure.*"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Our operating results and performance metrics are subject to fluctuations in foreign currency exchange rates due to the global scope of our business. Geopolitical and economic events, including war, trade disputes, economic sanctions and emerging market volatility, and associated uncertainty have caused, and may in the future cause, currencies to fluctuate. Accordingly, amounts reported as annualized recurring revenue, a performance metric which we measure at currency rates that are set at the beginning of each fiscal year and held constant throughout the year, may vary from actual revenue recognized in accordance with generally accepted accounting principles in the United States. We attempt",
+      "score": 0.8573
+    },
+    {
+      "id": 6,
+      "object_id": "26f4eb78380acd37",
+      "object_type": "table",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Last Updated: June 12, 2025",
+        "**Adobe Investor Relations Data Sheet**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "**Adobe Investor Relations Data Sheet**: Total Revenue: Q1FY23=4.66, Q2FY23=4.82, Q3FY23=4.89; Digital Media: Q1FY23=3.40, Q2FY23=3.51, Q3FY23=3.59; Digital Experience: Q1FY23=1.18, Q2FY23=1.22, Q3FY23=1.23",
+      "score": 0.8177
+    },
+    {
+      "id": 7,
+      "object_id": "20f11cc621d49d26",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ADOBE INC. CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY",
+        "(In millions)",
+        "**NOTE 2. REVENUE**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "*Segment Information* We report segment information based on the \"management\" approach. The management approach designates the internal reporting used by management for making decisions and assessing performance as the source of our reportable segments. Our Chief Executive Officer, the chief operating decision maker, reviews revenue and gross margin information for each of our reportable segments, but does not review operating expenses on a segment by segment basis. In addition, with the exception of goodwill, we do not identify or allocate our assets by the reportable segments. Our business is organized into the following reportable segments: - *Digital Media*—Our Digital Media segment prov",
+      "score": 0.7589
+    },
+    {
+      "id": 8,
+      "object_id": "2d5d979d879b07c9",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ADOBE INC. CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY",
+        "(In millions)",
+        "**NOTES TO CONSOLIDATED FINANCIAL STATEMENTS (Continued)**"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "As of December 1, 2023, the balance of deferred revenue was \\$5.95 billion. Significant movements in the deferred revenue balance during the period consisted of increases due to payments received prior to transfer of control of the underlying performance obligations to the customer, which were offset by decreases due to revenue recognized in the period. During the year ended November 29, 2024, approximately \\$5.87 billion of revenue was recognized that was included in the balance of deferred revenue as of December 1, 2023. Transaction price allocated to remaining performance obligations represents contracted revenue that has not yet been recognized, which includes deferred revenue and unbill",
+      "score": 0.7138
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "Which departments are underperforming?",
+        "question_class": "risk_extraction",
+        "lexical_query": "departments underperforming KPI revenue performance variance",
+        "semantic_query": "Identify which departments are underperforming relative to targets/benchmarks using performance metrics (e.g., revenue, margin, SLA, productivity) and flag the lowest performers.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "annual_report",
+          "quarterly_report",
+          "kpi_dashboard",
+          "performance_review"
+        ],
+        "target_metrics": [
+          "revenue",
+          "gross margin",
+          "operating margin",
+          "cost efficiency",
+          "customer satisfaction (CSAT/NPS)",
+          "service level/SLA attainment (on-time delivery, response time)"
+        ],
+        "target_entities": [
+          "departments",
+          "business units",
+          "teams",
+          "cost centers"
+        ],
+        "time_focus": "latest 1-2 reporting periods (and trailing 12 months if available)",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 180,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 75,
+      "chunk_hits": 8,
+      "table_hits": 50,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [
+        {
+          "label": "Total revenue",
+          "period": "Q1FY24",
+          "value": 5.18,
+          "raw_value": "5.18",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY24",
+          "value": 5.31,
+          "raw_value": "5.31",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q3FY24",
+          "value": 5.41,
+          "raw_value": "5.41",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q4FY24",
+          "value": 5.61,
+          "raw_value": "5.61",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q1FY25",
+          "value": 5.71,
+          "raw_value": "5.71",
+          "page": null
+        },
+        {
+          "label": "Total revenue",
+          "period": "Q2FY25",
+          "value": 5.87,
+          "raw_value": "5.87",
+          "page": null
+        }
+      ],
+      "trend_summary": "Total revenue shows an upward trend from Q1FY24 (5.18) to Q2FY25 (5.87), a change of 13.3%.",
+      "risk_factors": [
+        "We attempt to mitigate a portion of these foreign currency exchange risks to our operating results through foreign currency hedging based on our judgment of the appropriate trade-offs among risk, opportunity and expense."
+      ],
+      "risk_signals": [
+        "We attempt to mitigate a portion of these foreign currency exchange risks to our operating results through foreign currency hedging based on our judgment of the appropriate trade-offs among risk, opportunity and expense."
+      ],
+      "strategy_signals": [
+        "| | Number of<br>Shares<br>(in millions) | Weighted Average<br>Grant Date<br>Fair Value | | | Aggregate<br>Fair Value (1)<br>(in millions) | Weighted Average<br>Remaining<br>Contractual Life<br>(years) | |-----------------------------------|--------------------------------------|----------------------------------------------|--------|----|----------------------------------------------|--------------------------------------------------------------| | Beginning outstanding balance<br> | 0.5 | \\$ | 465.71 | | | | | Awarded | 0.2 | \\$ | 645.40 | | | | | Released<br> | (0.1) \\$ | | 455.65 | | | | | Forfeited | (0.1) \\$ | | 505.61 | | | | | Ending outstanding balance<br> | 0.5 | \\$ | 537.00 | \\$ | 256 | 1.11 | | Expected to vest | 0.5 | \\$ | 534.75 | \\$ | 239 | 1.18 |",
+        "| (dollars in millions) | 2024 | 2023 | 2022 | % Change<br>2024-2023 | |-----------------------------|-----------|-----------|-----------|-----------------------| | Subscription | \\$ 20,521 | \\$ 18,284 | \\$ 16,388 | 12 % | | Percentage of total revenue | 95 % | 94 % | 93 % | | | Product | 386 | 460 | 532 | (16) % | | Percentage of total revenue | 2 % | 2 % | 3 % | | | Services and other<br> | 598 | 665 | 686 | (10) % | | Percentage of total revenue | 3 % | 4 % | 4 % | | | Total revenue | \\$ 21,505 | \\$ 19,409 | \\$ 17,606 | 11 % |",
+        "| (dollars in millions) | 2024 | 2023 | 2022 | % Change<br>2024-2023 | |-----------------------------|-------------|-------------|-------------|-----------------------| | Subscription | \\$<br>1,799 | \\$<br>1,822 | \\$<br>1,646 | (1) % | | Percentage of total revenue | 8 % | 9 % | 9 % | | | Product | 25 | 29 | 35 | (14) % | | Percentage of total revenue | * | * | * | | | Services and other<br> | 534 | 503 | 484 | 6 % | | Percentage of total revenue | 2 % | 3 % | 3 % | | | Total cost of revenue<br> | \\$<br>2,358 | \\$<br>2,354 | \\$<br>2,165 | * |",
+        "Geopolitical and economic events, including war, trade disputes, economic sanctions and emerging market volatility, and associated uncertainty have caused, and may in the future cause, currencies to fluctuate.",
+        "Our business is organized into the following reportable segments: - *Digital Media*—Our Digital Media segment provides products and services that enable individuals, teams, businesses, and enterprises to create, publish and promote their content anywhere and accelerate their productivity by transforming how they view, share, engage with and collaborate on documents and creative content.",
+        "Our customers include creative professionals, including photographers, video editors, graphic and experience designers and game developers; communicators, including content creators, students, marketers and knowledge workers; and consumers."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": "outputs\\sample_plots\\which_departments_are_underperforming.png",
+    "evidence_support": {
+      "top_dense_score": 0.6415867209434509,
+      "query_overlap_ratio": 0.0
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 240,
+        "output_tokens": 180,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 3485,
+        "output_tokens": 241,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2896,
+        "output_tokens": 88,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nThe supplied evidence does not identify any underperforming departments. It only shows Adobe’s overall revenue trend is increasing and provides segment-level context for Digital Media and Digital Experience, but no department-by-department KPI comparison against targets or benchmarks.\n\n## Key Evidence\n- Total revenue increased from 5.18 in Q1FY24 to 5.87 in Q2FY25, a 13.3% rise, which does not indicate overall underperformance.\n- Adobe’s reportable segments are described, including Digital Media and Digital Experience, but the evidence provided does not include segment-level underperformance metrics or target comparisons.\n- The annual report states management reviews revenue and gross margin information for each reportable segment, but the supplied excerpts do not include those segment results or any variance-to-target analysis.\n\n## Sources\n- adobe_fy2024_annual_report.pdf | *Our intellectual property portfolio is a valuable asset and we may not be able to protect our intellectual property rights, including our source code, from infringement or unauthorized copying, use or disclosure.* > | Digital Media ARR | Creative ARR<br>+<br>Document Cloud ARR | > **Revenue** | pages n/a\n- adobe_fy2024_annual_report.pdf | *Our intellectual property portfolio is a valuable asset and we may not be able to protect our intellectual property rights, including our source code, from infringement or unauthorized copying, use or disclosure.* > *We are subject to fluctuations in foreign currency exchange rates and may not be able to effectively hedge our exposure.* | pages n/a\n- adobe_q2_fy2025_investor_datasheet.pdf | Last Updated: June 12, 2025 > **Adobe Investor Relations Data Sheet** | pages n/a\n- adobe_fy2024_annual_report.pdf | ADOBE INC. CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY > (In millions) > **NOTE 2. REVENUE** | pages n/a\n- adobe_fy2024_annual_report.pdf | ADOBE INC. CONSOLIDATED STATEMENTS OF STOCKHOLDERS' EQUITY > (In millions) > **NOTES TO CONSOLIDATED FINANCIAL STATEMENTS (Continued)** | pages n/a\n\n## Caveats\n- No department-level KPI table, benchmark, or target-versus-actual comparison was provided.\n- The evidence is mostly company-wide or segment-level, not department-level.\n- Without explicit performance thresholds or comparative metrics, underperforming departments cannot be reliably identified from the supplied material."
+}

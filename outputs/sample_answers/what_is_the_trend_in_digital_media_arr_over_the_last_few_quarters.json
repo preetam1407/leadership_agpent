@@ -1,0 +1,174 @@
+{
+  "question": "What is the trend in Digital Media ARR over the last few quarters?",
+  "question_class": "trend_analysis",
+  "direct_answer": "Digital Media ARR has been trending upward over the last few quarters. The latest disclosed figure is $18.09 billion exiting Q2 FY2025, up 12.1% year over year. The annual report shows Digital Media ARR at $17.33 billion exiting FY2024, up from $15.33 billion at FY2023, indicating continued growth. However, the provided evidence does not include a full quarter-by-quarter ARR series for the intervening quarters, so the precise quarter-over-quarter path cannot be fully reconstructed from the supplied materials.",
+  "key_evidence": [
+    "Digital Media ARR exiting Q2 FY2025 was $18.09 billion, representing 12.1% year-over-year growth.",
+    "Total Digital Media ARR grew to $17.33 billion at the end of fiscal 2024, up from $15.33 billion at the end of fiscal 2023.",
+    "The investor datasheet shows Digital Media revenue rising each quarter from Q1 FY2023 through Q2 FY2025, which is consistent with an upward business trend, though this is revenue rather than ARR."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Second Quarter Fiscal Year 2025 Business Segment Highlights"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "f2f15095da7ba3f3"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "| Digital Media ARR | Creative ARR + Document Cloud ARR |"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "75c0654d5410f98e"
+    },
+    {
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "object_type": "chunk",
+      "object_id": "229faa198b91f8a6"
+    }
+  ],
+  "caveats": [
+    "A complete quarter-by-quarter Digital Media ARR series was not provided in the evidence.",
+    "The datasheet includes quarterly Digital Media revenue, not quarterly ARR, so it can only support a directional inference, not exact ARR quarter-over-quarter changes.",
+    "ARR values are affected by currency revaluation, as noted in the annual report, which can make comparisons across periods less directly comparable.",
+    "The provided evidence does not include a quarter-by-quarter Digital Media ARR series; it only provides ARR for exiting Q2 FY2025 and total Digital Media ARR for FY2024 and FY2023.",
+    "The cited investor datasheet evidence (id 1 and id 9) contains Digital Media revenue by quarter, not Digital Media ARR by quarter, so it cannot substantiate an ARR trend across intervening quarters.",
+    "The answer claims an upward trend “over the last few quarters,” but the evidence only supports directionally for Q2 FY2025 vs prior fiscal year end (FY2024) and does not show the intermediate quarter path."
+  ],
+  "evidence_pack": [
+    {
+      "id": 3,
+      "object_id": "f2f15095da7ba3f3",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Second Quarter Fiscal Year 2025 Business Segment Highlights"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "- Digital Media segment revenue was $4.35 billion, which represents 11 percent year-over-year growth, or 12 percent in constant currency. Digital Media Annualized Recurring Revenue ('ARR') exiting the quarter was $18.09 billion, representing 12.1 percent year-over-year growth. - Digital Experience segment revenue was $1.46 billion, representing 10 percent year-over-year growth as reported and in constant currency. Digital Experience subscription revenue was $1.33 billion, representing 11 percent year-over-year growth as reported and in constant currency.",
+      "score": 1.0603
+    },
+    {
+      "id": 4,
+      "object_id": "75c0654d5410f98e",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "| Digital Media ARR | Creative ARR + Document Cloud ARR |"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "Creative ARR exiting fiscal 2024 was $13.85 billion, up from $12.49 billion at the end of fiscal 2023. Document Cloud ARR exiting fiscal 2024 was $3.48 billion, up from $2.84 billion at the end of fiscal 2023. Total Digital Media ARR grew to $17.33 billion at the end of fiscal 2024, up from $15.33 billion at the end of fiscal 2023. Revaluing our ending ARR for fiscal 2024 using currency rates determined at the beginning of fiscal 2025, our Digital Media ARR at the end of fiscal 2024 would be $17.22 billion or approximately $117 million lower than the ARR reported above. Our success in driving growth in ARR has positively affected our revenue growth. Creative revenue in fiscal 2024 was $12.68",
+      "score": 0.8252
+    },
+    {
+      "id": 9,
+      "object_id": "229faa198b91f8a6",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_investor_datasheet.pdf",
+      "heading_path": [
+        "Document Overview"
+      ],
+      "page_start": null,
+      "page_end": null,
+      "quote": "<!-- image --> | | Description | Q1FY23 | Q2FY23 | Q3FY23 | Q4FY23 | FY2023 | Q1FY24 | Q2FY24 | Q3FY24 | Q4FY24 | FY2024 | Q1FY25 | Q2FY25 | FY25 YTD | |-----------------------------------------------|------------------------------------------------------------------------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|------------| | Revenue ($Billions) | Total Revenue | 4.66 | 4.82 | 4.89 | 5.05 | 19.41 | 5.18 | 5.31 | 5.41 | 5.61 | 21.51 | 5.71 | 5.87 | 11.59 | | Revenue by Segment ($Billions) | Digital Media | 3.40 | 3.51 | 3.59 | 3.72 | 14.22 | 3.82 | 3.91 | 4.00 | 4.15 | 15.86 | 4.23 | 4.35",
+      "score": 0.01
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "What is the trend in Digital Media ARR over the last few quarters?",
+        "question_class": "trend_analysis",
+        "lexical_query": "trend in Digital Media ARR over the last few quarters",
+        "semantic_query": "Identify and summarize the quarter-over-quarter trend in Digital Media Annual Recurring Revenue (ARR) for the most recent quarters, including direction (up/down), magnitude, and any notable inflection points.",
+        "prioritize_tables": true,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "quarterly_report",
+          "annual_report"
+        ],
+        "target_metrics": [
+          "Digital Media ARR",
+          "ARR (Digital Media)",
+          "quarterly Digital Media ARR"
+        ],
+        "target_entities": [
+          "Digital Media"
+        ],
+        "time_focus": "last few quarters",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 247,
+        "output_tokens": 137,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 79,
+      "chunk_hits": 12,
+      "table_hits": 54,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [],
+      "trend_summary": null,
+      "risk_factors": [],
+      "risk_signals": [],
+      "strategy_signals": [
+        "3 Revenue associated with the Creative &amp; Marketing Professionals customer group consists of Digital Experience offerings as well as Creative Cloud flagship apps within Digital Media.",
+        "4 Revenue associated with the Business Professionals &amp; Consumers customer group consists of Adobe Acrobat offerings and Adobe Express, all of which are part of Digital Media.",
+        "5 Represents the percentage of remaining performance obligations (\"RPO\") which are expected to be recognized over the next 12 months, excluding RPO associated with non-cancellable and nonrefundable committed funds under certain enterprise arrangements.",
+        "- Digital Media segment revenue was $4.35 billion, which represents 11 percent year-over-year growth, or 12 percent in constant currency.",
+        "Digital Media Annualized Recurring Revenue ('ARR') exiting the quarter was $18.09 billion, representing 12.1 percent year-over-year growth.",
+        "- Digital Experience segment revenue was $1.46 billion, representing 10 percent year-over-year growth as reported and in constant currency."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": null,
+    "evidence_support": {
+      "top_dense_score": 0.7005979418754578,
+      "query_overlap_ratio": 0.167
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 247,
+        "output_tokens": 137,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 2163,
+        "output_tokens": 319,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2581,
+        "output_tokens": 148,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nDigital Media ARR has been trending upward over the last few quarters. The latest disclosed figure is $18.09 billion exiting Q2 FY2025, up 12.1% year over year. The annual report shows Digital Media ARR at $17.33 billion exiting FY2024, up from $15.33 billion at FY2023, indicating continued growth. However, the provided evidence does not include a full quarter-by-quarter ARR series for the intervening quarters, so the precise quarter-over-quarter path cannot be fully reconstructed from the supplied materials.\n\n## Key Evidence\n- Digital Media ARR exiting Q2 FY2025 was $18.09 billion, representing 12.1% year-over-year growth.\n- Total Digital Media ARR grew to $17.33 billion at the end of fiscal 2024, up from $15.33 billion at the end of fiscal 2023.\n- The investor datasheet shows Digital Media revenue rising each quarter from Q1 FY2023 through Q2 FY2025, which is consistent with an upward business trend, though this is revenue rather than ARR.\n\n## Sources\n- adobe_q2_fy2025_earnings_release.pdf | Second Quarter Fiscal Year 2025 Business Segment Highlights | pages n/a\n- adobe_fy2024_annual_report.pdf | | Digital Media ARR | Creative ARR + Document Cloud ARR | | pages n/a\n- adobe_q2_fy2025_investor_datasheet.pdf | Document Overview | pages n/a\n\n## Caveats\n- A complete quarter-by-quarter Digital Media ARR series was not provided in the evidence.\n- The datasheet includes quarterly Digital Media revenue, not quarterly ARR, so it can only support a directional inference, not exact ARR quarter-over-quarter changes.\n- ARR values are affected by currency revaluation, as noted in the annual report, which can make comparisons across periods less directly comparable.\n- The provided evidence does not include a quarter-by-quarter Digital Media ARR series; it only provides ARR for exiting Q2 FY2025 and total Digital Media ARR for FY2024 and FY2023.\n- The cited investor datasheet evidence (id 1 and id 9) contains Digital Media revenue by quarter, not Digital Media ARR by quarter, so it cannot substantiate an ARR trend across intervening quarters.\n- The answer claims an upward trend “over the last few quarters,” but the evidence only supports directionally for Q2 FY2025 vs prior fiscal year end (FY2024) and does not show the intermediate quarter path."
+}

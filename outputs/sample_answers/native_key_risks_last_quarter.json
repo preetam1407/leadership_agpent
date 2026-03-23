@@ -1,0 +1,249 @@
+{
+  "question": "What were the key risks highlighted in the last quarter?",
+  "question_class": "risk_extraction",
+  "direct_answer": "The last quarter’s highlighted risks were primarily cybersecurity and IT disruption risks, macroeconomic and foreign-exchange pressures, AI and innovation execution risks, competitive and customer-retention risks, third-party dependency risks, and regulatory/legal/compliance risks. The filings also flagged risks around acquisitions/investments, personnel retention, revenue-recognition timing, debt, and catastrophic events.",
+  "key_evidence": [
+    "Adobe’s risk disclosures list: failure to innovate and meet customer needs; issues relating to development and use of AI; failure to compete effectively; damage to reputation/brands; failure to realize benefits of investments or acquisitions; service interruptions or failures in IT systems by Adobe or third parties; security incidents; failure to manage critical third-party relationships; adverse macroeconomic conditions; complex sales cycles; recruitment/retention of key personnel; litigation, regulatory inquiries, IP claims; compliance with global laws and regulations; foreign currency fluctuations; debt obligations; and catastrophic events.",
+    "Adobe’s cybersecurity section says it maintains an information security risk management framework and regularly reviews newly identified risks and remediation progress, indicating cybersecurity remained a material focus.",
+    "Adobe’s macroeconomic discussion highlights exposure to inflation, interest rates, foreign currency exchange rates, potential slowdowns/recessions, and geopolitical pressures.",
+    "The earnings release forward-looking statements repeat risks tied to AI, macro conditions, foreign exchange, strategic investments, revenue, operating margin, and other uncertainties."
+  ],
+  "sources": [
+    {
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Forward-Looking Statements, Non-GAAP and Other Disclosures"
+      ],
+      "page_start": 2,
+      "page_end": 3,
+      "object_type": "chunk",
+      "object_id": "a56b8dd95cb9c71b"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 1C. CYBERSECURITY",
+        "Risk Management and Strategy"
+      ],
+      "page_start": 35,
+      "page_end": 36,
+      "object_type": "chunk",
+      "object_id": "4194cdf4350623e8"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 1A. RISK FACTORS"
+      ],
+      "page_start": 23,
+      "page_end": 23,
+      "object_type": "chunk",
+      "object_id": "0ad87f95a95abba5"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 7. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF",
+        "Macroeconomic Conditions"
+      ],
+      "page_start": 41,
+      "page_end": 43,
+      "object_type": "chunk",
+      "object_id": "49b669342aa2fc6d"
+    },
+    {
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 1A. RISK FACTORS",
+        "General Risk Factors"
+      ],
+      "page_start": 33,
+      "page_end": 34,
+      "object_type": "chunk",
+      "object_id": "f4f4fec8f994e1a9"
+    }
+  ],
+  "caveats": [
+    "The provided evidence is mostly from forward-looking statements and annual-report risk disclosures, not a quarter-specific risk section, so this is a conservative extraction of the risks highlighted in the latest available quarter-related filing.",
+    "No quantitative severity, likelihood, or mitigation-status metrics were provided in the evidence.",
+    "The evidence does not clearly separate which risks were newly highlighted in the quarter versus recurring baseline risks from prior filings.",
+    "The provided evidence does not explicitly list many of the specific risk categories claimed in the answer (e.g., competitive/customer-retention risks, third-party dependency risks, regulatory/legal/compliance risks, acquisitions/investments, personnel retention, revenue-recognition timing, debt, service interruptions/IT failures). The evidence shown includes only: (1) forward-looking statements referencing AI/innovation momentum and macro/FX/strategic investments, (2) a cybersecurity risk management description, (3) macroeconomic conditions discussion, and (4) a catastrophic events disruption risk excerpt.",
+    "The answer’s cybersecurity/IT disruption and other detailed items are not directly supported by the provided quotes; only general cybersecurity framework language and catastrophic events disruption language are present.",
+    "Because the evidence excerpts are incomplete relative to the answer’s breadth, the answer cannot be considered fully grounded in the supplied material."
+  ],
+  "evidence_pack": [
+    {
+      "id": 1,
+      "object_id": "a56b8dd95cb9c71b",
+      "object_type": "chunk",
+      "doc_name": "adobe_q2_fy2025_earnings_release.pdf",
+      "heading_path": [
+        "Forward-Looking Statements, Non-GAAP and Other Disclosures"
+      ],
+      "page_start": 2,
+      "page_end": 3,
+      "quote": "In addition to historical information, this press release contains “forward-looking statements” within the meaning of applicable securities laws, including statements related to our business, strategy, artificial intelligence (“AI”) and innovation momentum; our market and AI opportunity and future growth; market and AI trends; current macroeconomic conditions; fluctuations in foreign currency exchange rates; strategic investments; customer success and groups; revenue; operating margin; operating efficiencies; annualized recurring revenue; tax rate; earnings per share; and share count. Each of the forward-looking statements we make in this press release involves risks, uncertainties and assum",
+      "score": 1.2351
+    },
+    {
+      "id": 3,
+      "object_id": "4194cdf4350623e8",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 1C. CYBERSECURITY",
+        "Risk Management and Strategy"
+      ],
+      "page_start": 35,
+      "page_end": 36,
+      "quote": "Adobe has certain security processes, infrastructure, systems, policies and practices for assessing, identifying and managing risks from cybersecurity threats.  We maintain an information security risk management framework for managing cybersecurity risks, priorities and projects for our products, services, infrastructure and corporate resources.  As part of our framework, a cybersecurity risk steering committee meets regularly to review newly identified risks and progress on remediating existing risks.  We conduct regular security reviews, simulations and testing, including internal and external penetration testing, vulnerability assessments and regular scans on our hosts and network device",
+      "score": 0.752
+    },
+    {
+      "id": 5,
+      "object_id": "0ad87f95a95abba5",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 1A. RISK FACTORS"
+      ],
+      "page_start": 23,
+      "page_end": 23,
+      "quote": "As previously discussed, our actual results could differ materially from our forward-looking statements. Below we discuss some of the factors that could cause these differences. The occurrence of these and many other factors described in this report, and factors that we do not presently know or that we currently believe to be immaterial, could materially and adversely affect our operations, performance and financial condition. Many factors affect more than one category and the factors are not in order of significance or probability of occurrence because they have been grouped by categories.",
+      "score": 0.6834
+    },
+    {
+      "id": 6,
+      "object_id": "49b669342aa2fc6d",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 7. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF",
+        "Macroeconomic Conditions"
+      ],
+      "page_start": 41,
+      "page_end": 43,
+      "quote": "As a corporation with an extensive global footprint, we are subject to risks and exposures from the evolving macroeconomic environment, including the effects of increased global inflationary pressures and interest rates, fluctuations in foreign currency exchange rates, potential economic slowdowns or recessions and geopolitical pressures, including the unknown impacts of current and future trade regulations.  We continuously monitor the direct and indirect impacts of these circumstances on our business and financial results.  While our revenue and earnings are relatively predictable as a result of our subscription-based business model, the broader implications of these macroeconomic events o",
+      "score": 0.6563
+    },
+    {
+      "id": 10,
+      "object_id": "f4f4fec8f994e1a9",
+      "object_type": "chunk",
+      "doc_name": "adobe_fy2024_annual_report.pdf",
+      "heading_path": [
+        "ITEM 1A. RISK FACTORS",
+        "General Risk Factors"
+      ],
+      "page_start": 33,
+      "page_end": 34,
+      "quote": "Catastrophic events, including events associated with climate change, may disrupt our business and adversely affect our financial condition and results of operations.  Our business relies on our network infrastructure and enterprise Apps, internal technology systems and websites.  A disruption, infiltration or failure of our systems, data centers or operations, or those of our third-party service providers due to a major earthquake, other natural disasters, including climate-related events (such as drought, water security, heat waves, cold waves, wildfires and poor air quality), power shutoff or loss, telecommunications failure, epidemic, pandemic, war, terrorist attack or other catastrophic",
+      "score": 0.01
+    }
+  ],
+  "analytics": {
+    "retrieval": {
+      "question_plan": {
+        "question": "What were the key risks highlighted in the last quarter?",
+        "question_class": "risk_extraction",
+        "lexical_query": "key risks highlighted in the last quarter last quarter risk highlights",
+        "semantic_query": "Identify and summarize the primary risks mentioned for the most recent quarter, including any risk factors, operational/financial/compliance risks, and mitigation actions.",
+        "prioritize_tables": false,
+        "prioritize_latest": true,
+        "prioritize_report_types": [
+          "quarterly_report",
+          "annual_report"
+        ],
+        "target_metrics": [
+          "risk themes",
+          "risk severity/impact",
+          "risk likelihood",
+          "mitigation status"
+        ],
+        "target_entities": [
+          "company",
+          "business units",
+          "regions",
+          "key programs/projects"
+        ],
+        "time_focus": "last quarter",
+        "widen_if_sparse": true
+      },
+      "classifier_usage": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 244,
+        "output_tokens": 135,
+        "errors": []
+      },
+      "doc_filter_ids": [
+        "07e86e945c8d3d78",
+        "899c938270c0b4cb",
+        "9fab1dd68634839d"
+      ],
+      "section_hits": 84,
+      "chunk_hits": 12,
+      "table_hits": 2,
+      "returned_candidates": 10
+    },
+    "computed": {
+      "metric_series": [],
+      "trend_summary": null,
+      "risk_factors": [
+        "failure to innovate effectively and meet customer needs",
+        "issues relating to development and use of AI",
+        "failure to compete effectively",
+        "damage to our reputation or brands",
+        "failure to realize the anticipated benefits of investments or acquisitions",
+        "service interruptions or failures in information technology systems by us or third parties",
+        "security incidents",
+        "failure to effectively develop, manage and maintain critical third-party business relationships",
+        "risks associated with being a multinational corporation and adverse macroeconomic conditions",
+        "complex sales cycles"
+      ],
+      "risk_signals": [
+        "Each of the forward-looking statements we make in this press release involves risks, uncertainties and assumptions based on information available to us as of the date of this press release.",
+        "Such risks and uncertainties, many of which relate to matters beyond our control, could cause actual results to differ materially from these forward-looking statements.",
+        "Factors that might cause or contribute to such differences include, but are not limited to: failure to innovate effectively and meet customer needs; issues relating to development and use of AI; failure to compete effectively; damage to our reputation or brands; failure to realize the anticipated benefits of investments or acquisitions; service interruptions or failures in information technology systems by us or third parties; security incidents; failure to effectively develop, manage and maintain critical third-party business relationships; risks associated with being a multinational corporation and adverse macroeconomic conditions; complex sales cycles; failure to recruit and retain key personnel; litigation, regulatory inquiries and intellectual property infringement claims; changes in, and compliance with, global laws and regulations, including those related to information security and privacy; failure to protect our intellectual property; changes in tax regulations; complex government procurement processes; risks related to fluctuations in or the timing of revenue recognition from our subscription offerings; fluctuations in foreign currency exchange rates; impairment charges; our existing and future debt obligations; catastrophic events; and fluctuations in our stock price.",
+        "Further information on these and other factors are discussed in the section titled “Risk Factors” in Adobe’s most recently filed Annual Report on Form 10-K and Adobe's most recently filed Quarterly Reports on Form 10-Q.",
+        "The risks described in this press release and in Adobe’s filings with the U.S.",
+        "Each of the forward-looking statements we make in this report involves risks, uncertainties and assumptions based on information available to us as of the date of this report."
+      ],
+      "strategy_signals": [
+        "In addition to historical information, this press release contains “forward-looking statements” within the meaning of applicable securities laws, including statements related to our business, strategy, artificial intelligence (“AI”) and innovation momentum; our market and AI opportunity and future growth; market and AI trends; current macroeconomic conditions; fluctuations in foreign currency exchange rates; strategic investments; customer success and groups; revenue; operating margin; operating efficiencies; annualized recurring revenue; tax rate; earnings per share; and share count.",
+        "Each of the forward-looking statements we make in this press release involves risks, uncertainties and assumptions based on information available to us as of the date of this press release.",
+        "Such risks and uncertainties, many of which relate to matters beyond our control, could cause actual results to differ materially from these forward-looking statements.",
+        "Factors that might cause or contribute to such differences include, but are not limited to: failure to innovate effectively and meet customer needs; issues relating to development and use of AI; failure to compete effectively; damage to our reputation or brands; failure to realize the anticipated benefits of investments or acquisitions; service interruptions or failures in information technology systems by us or third parties; security incidents; failure to effectively develop, manage and maintain critical third-party business relationships; risks associated with being a multinational corporation and adverse macroeconomic conditions; complex sales cycles; failure to recruit and retain key personnel; litigation, regulatory inquiries and intellectual property infringement claims; changes in, and compliance with, global laws and regulations, including those related to information security and privacy; failure to protect our intellectual property; changes in tax regulations; complex government procurement processes; risks related to fluctuations in or the timing of revenue recognition from our subscription offerings; fluctuations in foreign currency exchange rates; impairment charges; our existing and future debt obligations; catastrophic events; and fluctuations in our stock price.",
+        "2 Undue reliance should not be placed on the financial information set forth in this press release, which reflects estimates based on information available at this time.",
+        "In addition to historical information, this Annual Report on Form 10-K contains “forward-looking statements” within the meaning of applicable securities laws, including statements related to our product development plans and new or enhanced offerings; our business, artificial intelligence and innovation momentum; our strategy, market opportunity and future growth; market trends; current macroeconomic conditions; fluctuations in foreign currency exchange rates; strategic investments; industry positioning; and customer acquisition and retention."
+      ],
+      "comparison_rows": []
+    },
+    "plot_path": null,
+    "evidence_support": {
+      "top_dense_score": 0.6285090446472168,
+      "query_overlap_ratio": 0.077
+    },
+    "llm_usage": {
+      "classifier": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 244,
+        "output_tokens": 135,
+        "errors": []
+      },
+      "answer": {
+        "model": "gpt-5.4-mini",
+        "input_tokens": 2863,
+        "output_tokens": 385,
+        "errors": []
+      },
+      "groundedness": {
+        "model": "gpt-5.4-nano",
+        "input_tokens": 2617,
+        "output_tokens": 193,
+        "errors": []
+      }
+    },
+    "insufficient_evidence": false
+  },
+  "markdown_report": "## Direct Answer\nThe last quarter’s highlighted risks were primarily cybersecurity and IT disruption risks, macroeconomic and foreign-exchange pressures, AI and innovation execution risks, competitive and customer-retention risks, third-party dependency risks, and regulatory/legal/compliance risks. The filings also flagged risks around acquisitions/investments, personnel retention, revenue-recognition timing, debt, and catastrophic events.\n\n## Key Evidence\n- Adobe’s risk disclosures list: failure to innovate and meet customer needs; issues relating to development and use of AI; failure to compete effectively; damage to reputation/brands; failure to realize benefits of investments or acquisitions; service interruptions or failures in IT systems by Adobe or third parties; security incidents; failure to manage critical third-party relationships; adverse macroeconomic conditions; complex sales cycles; recruitment/retention of key personnel; litigation, regulatory inquiries, IP claims; compliance with global laws and regulations; foreign currency fluctuations; debt obligations; and catastrophic events.\n- Adobe’s cybersecurity section says it maintains an information security risk management framework and regularly reviews newly identified risks and remediation progress, indicating cybersecurity remained a material focus.\n- Adobe’s macroeconomic discussion highlights exposure to inflation, interest rates, foreign currency exchange rates, potential slowdowns/recessions, and geopolitical pressures.\n- The earnings release forward-looking statements repeat risks tied to AI, macro conditions, foreign exchange, strategic investments, revenue, operating margin, and other uncertainties.\n\n## Sources\n- adobe_q2_fy2025_earnings_release.pdf | Forward-Looking Statements, Non-GAAP and Other Disclosures | pages 2-3\n- adobe_fy2024_annual_report.pdf | ITEM 1C. CYBERSECURITY > Risk Management and Strategy | pages 35-36\n- adobe_fy2024_annual_report.pdf | ITEM 1A. RISK FACTORS | pages 23-23\n- adobe_fy2024_annual_report.pdf | ITEM 7. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF > Macroeconomic Conditions | pages 41-43\n- adobe_fy2024_annual_report.pdf | ITEM 1A. RISK FACTORS > General Risk Factors | pages 33-34\n\n## Caveats\n- The provided evidence is mostly from forward-looking statements and annual-report risk disclosures, not a quarter-specific risk section, so this is a conservative extraction of the risks highlighted in the latest available quarter-related filing.\n- No quantitative severity, likelihood, or mitigation-status metrics were provided in the evidence.\n- The evidence does not clearly separate which risks were newly highlighted in the quarter versus recurring baseline risks from prior filings.\n- The provided evidence does not explicitly list many of the specific risk categories claimed in the answer (e.g., competitive/customer-retention risks, third-party dependency risks, regulatory/legal/compliance risks, acquisitions/investments, personnel retention, revenue-recognition timing, debt, service interruptions/IT failures). The evidence shown includes only: (1) forward-looking statements referencing AI/innovation momentum and macro/FX/strategic investments, (2) a cybersecurity risk management description, (3) macroeconomic conditions discussion, and (4) a catastrophic events disruption risk excerpt.\n- The answer’s cybersecurity/IT disruption and other detailed items are not directly supported by the provided quotes; only general cybersecurity framework language and catastrophic events disruption language are present.\n- Because the evidence excerpts are incomplete relative to the answer’s breadth, the answer cannot be considered fully grounded in the supplied material."
+}

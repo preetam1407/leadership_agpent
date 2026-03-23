@@ -117,9 +117,24 @@ def generate_answer(
                 top_support,
                 overlap_ratio,
             )
+            if _prefer_computed_wording(plan, computed):
+                fallback = _fallback_report(
+                    question,
+                    plan,
+                    candidates,
+                    evidence_items,
+                    computed,
+                    retrieval_analytics,
+                    plot_path,
+                    insufficient=False,
+                )
+                report.direct_answer = fallback.direct_answer
+                report.key_evidence = fallback.key_evidence
+                report.sources = fallback.sources
+                report.evidence_pack = fallback.evidence_pack
             if grounded is not None and not grounded.get("grounded", True):
                 report.caveats.extend(grounded.get("caveats", []))
-                report.markdown_report = _format_markdown(report.direct_answer, report.key_evidence, report.sources, report.caveats)
+            report.markdown_report = _format_markdown(report.direct_answer, report.key_evidence, report.sources, report.caveats)
             report.analytics["llm_usage"] = llm_usage
             report.analytics["insufficient_evidence"] = False
             return report
@@ -350,6 +365,14 @@ def _fallback_report(
     )
 
 
+def _prefer_computed_wording(plan: QuestionPlan, computed: dict[str, Any]) -> bool:
+    if plan.question_class == "comparison" and computed.get("comparison_rows"):
+        return True
+    if plan.question_class in {"trend_analysis", "metric_lookup"} and computed.get("trend_summary"):
+        return True
+    return False
+
+
 def _extract_metric_series(
     question: str,
     plan: QuestionPlan,
@@ -544,11 +567,49 @@ def _extract_comparison_rows(
         rows = list(merged.values())
 
     if underperforming_mode:
+        rows = _filter_material_comparison_rows(rows)
         rows.sort(key=lambda item: float(item.get("growth_pct", float("inf"))))
         return rows
 
     rows.sort(key=lambda item: float(item.get("value", 0.0)), reverse=True)
     return rows
+
+
+def _filter_material_comparison_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    if len(rows) < 2:
+        return rows
+
+    values: list[float] = []
+    for row in rows:
+        raw_value = row.get("end_value", row.get("value", 0.0))
+        try:
+            values.append(abs(float(raw_value)))
+        except (TypeError, ValueError):
+            continue
+
+    if len(values) < 2:
+        return rows
+
+    max_value = max(values)
+    total_value = sum(values)
+    if math.isclose(max_value, 0.0) or math.isclose(total_value, 0.0):
+        return rows
+
+    # Filter out tiny residual categories so generic "underperforming departments"
+    # questions compare peer business units instead of immaterial line items.
+    threshold = max(max_value * 0.10, total_value * 0.05)
+    filtered = []
+    for row in rows:
+        raw_value = row.get("end_value", row.get("value", 0.0))
+        try:
+            numeric = abs(float(raw_value))
+        except (TypeError, ValueError):
+            filtered.append(row)
+            continue
+        if numeric >= threshold:
+            filtered.append(row)
+
+    return filtered if len(filtered) >= 2 else rows
 
 
 def _metric_row_score(question: str, target_metrics: list[str], target_entities: list[str], label: str) -> float:
