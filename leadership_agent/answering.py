@@ -94,10 +94,20 @@ def generate_answer(
 
     top_support = max(0.0, candidates[0].dense_score) if candidates else 0.0
     overlap_ratio = _query_overlap_ratio(question, plan, candidates[0]) if candidates else 0.0
-    has_computed_support = bool(series or computed["risk_signals"] or computed["strategy_signals"] or computed["comparison_rows"])
+    has_computed_support = bool(
+        series
+        or computed["comparison_rows"]
+        or computed["risk_factors"]
+        or (plan.question_class == "risk_extraction" and computed["risk_signals"])
+        or (plan.question_class == "strategic_summary" and computed["strategy_signals"])
+    )
     insufficient = (
         len(candidates) == 0
-        or (top_support < config.answer.insufficient_evidence_threshold and overlap_ratio < max(0.2, config.answer.insufficient_evidence_threshold / 2))
+        or (
+            top_support < config.answer.insufficient_evidence_threshold
+            and overlap_ratio < max(0.2, config.answer.insufficient_evidence_threshold / 2)
+            and not has_computed_support
+        )
         or (overlap_ratio == 0.0 and not has_computed_support)
     )
     llm_usage: dict[str, Any] = {"classifier": retrieval_analytics.get("classifier_usage", {}), "answer": {}, "groundedness": {}}

@@ -49,6 +49,8 @@ def _safe_page_count(*values: Any) -> int:
             if stripped.isdigit():
                 return int(stripped)
             continue
+        if isinstance(value, dict):
+            return len(value)
         if isinstance(value, list):
             return len(value)
     return 0
@@ -108,7 +110,11 @@ class MarkerParser(BaseParser):
                 structured = rendered.model_dump()
             except Exception:
                 structured = {}
-        page_count = len(structured.get("children", [])) if isinstance(structured.get("children"), list) else 0
+        metadata = structured.get("metadata", {}) if isinstance(structured, dict) else {}
+        page_count = _safe_page_count(
+            structured.get("children") if isinstance(structured, dict) else None,
+            metadata.get("page_stats") if isinstance(metadata, dict) else None,
+        )
         return normalize_whitespace(markdown), structured, page_count
 
 
@@ -464,6 +470,207 @@ def split_sections(document: DocumentRecord, markdown: str) -> list[SectionRecor
     return sections
 
 
+def _normalize_match_text(text: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = normalize_whitespace(text).lower()
+    return re.sub(r"[^a-z0-9]+", " ", text).strip()
+
+
+def _section_snippets(section: SectionRecord) -> list[str]:
+    snippets: list[str] = []
+    if section.heading and section.heading.lower() != "document overview":
+        snippets.append(section.heading)
+    for line in section.text.splitlines():
+        stripped = line.strip()
+        if not stripped or PAGE_MARKER_RE.match(stripped):
+            continue
+        snippets.append(stripped[:220])
+        if len(snippets) >= 3:
+            break
+    normalized: list[str] = []
+    seen: set[str] = set()
+    for snippet in snippets:
+        cleaned = _normalize_match_text(snippet)
+        if len(cleaned) < 8 or cleaned in seen:
+            continue
+        seen.add(cleaned)
+        normalized.append(cleaned)
+    return normalized
+
+
+def _score_page_text(page_text: str, snippets: list[str]) -> int:
+    score = 0
+    page_tokens = set(page_text.split())
+    for snippet in snippets:
+        if snippet in page_text or page_text in snippet:
+            score = max(score, len(snippet.split()) + 5)
+            continue
+        snippet_tokens = set(snippet.split())
+        overlap = len(page_tokens & snippet_tokens)
+        if overlap >= min(4, max(2, len(snippet_tokens) // 2)):
+            score = max(score, overlap)
+    return score
+
+
+def _docling_text_blocks(parser_output: dict[str, Any]) -> list[tuple[int, str]]:
+    blocks: list[tuple[int, str]] = []
+    for item in parser_output.get("texts", []):
+        if not isinstance(item, dict):
+            continue
+        prov = item.get("prov") or []
+        if not isinstance(prov, list):
+            continue
+        page_numbers = sorted(
+            {
+                int(entry.get("page_no"))
+                for entry in prov
+                if isinstance(entry, dict) and isinstance(entry.get("page_no"), (int, float))
+            }
+        )
+        if not page_numbers:
+            continue
+        text = item.get("text") or item.get("orig") or ""
+        cleaned = _normalize_match_text(text)
+        if len(cleaned) < 8:
+            continue
+        blocks.append((page_numbers[0], cleaned))
+    return blocks
+
+
+def _assign_docling_section_pages(sections: list[SectionRecord], parser_output: dict[str, Any]) -> None:
+    blocks = _docling_text_blocks(parser_output)
+    if not blocks:
+        return
+    cursor = 0
+    for section in sections:
+        if section.page_start is not None:
+            continue
+        snippets = _section_snippets(section)
+        if not snippets:
+            continue
+        best_index = None
+        best_score = 0
+        for index in range(cursor, len(blocks)):
+            page_no, block_text = blocks[index]
+            score = _score_page_text(block_text, snippets)
+            if score > best_score:
+                best_score = score
+                best_index = index
+                if score >= 8:
+                    break
+        if best_index is not None and best_score >= 3:
+            section.page_start = blocks[best_index][0]
+            cursor = best_index
+
+
+def _marker_toc_entries(parser_output: dict[str, Any]) -> list[tuple[str, int]]:
+    metadata = parser_output.get("metadata", {})
+    toc = metadata.get("table_of_contents", []) if isinstance(metadata, dict) else []
+    entries: list[tuple[str, int]] = []
+    if not isinstance(toc, list):
+        return entries
+    for item in toc:
+        if not isinstance(item, dict):
+            continue
+        title = item.get("title")
+        page_id = item.get("page_id")
+        if not isinstance(title, str) or not isinstance(page_id, (int, float)):
+            continue
+        cleaned = _normalize_match_text(title)
+        if len(cleaned) < 4:
+            continue
+        entries.append((cleaned, int(page_id) + 1))
+    return entries
+
+
+def _assign_marker_section_pages(sections: list[SectionRecord], parser_output: dict[str, Any]) -> None:
+    toc_entries = _marker_toc_entries(parser_output)
+    if not toc_entries:
+        return
+    cursor = 0
+    for section in sections:
+        if section.page_start is not None:
+            continue
+        heading = _normalize_match_text(section.heading)
+        if len(heading) < 4:
+            continue
+        for index in range(cursor, len(toc_entries)):
+            toc_heading, page_no = toc_entries[index]
+            if heading == toc_heading or heading in toc_heading or toc_heading in heading:
+                section.page_start = page_no
+                cursor = index
+                break
+
+
+def _section_search_snippet(section: SectionRecord) -> str:
+    for line in section.text.splitlines():
+        stripped = line.strip()
+        if not stripped or PAGE_MARKER_RE.match(stripped):
+            continue
+        return stripped[:220]
+    return section.heading[:220] if section.heading else ""
+
+
+def _assign_section_pages_by_position(markdown: str, page_count: int, sections: list[SectionRecord]) -> None:
+    if page_count <= 0 or not sections or "[PAGE " in markdown:
+        return
+    total_length = max(1, len(markdown))
+    search_pos = 0
+    for index, section in enumerate(sections):
+        if section.page_start is not None:
+            snippet = _section_search_snippet(section)
+            if snippet:
+                found = markdown.find(snippet, search_pos)
+                if found >= 0:
+                    search_pos = found + len(snippet)
+            continue
+        snippet = _section_search_snippet(section)
+        found = markdown.find(snippet, search_pos) if snippet else -1
+        if found >= 0:
+            search_pos = found + len(snippet)
+            position = found
+        else:
+            position = search_pos if search_pos > 0 else int((index / max(1, len(sections))) * total_length)
+        estimated = min(page_count, max(1, int((position / total_length) * page_count) + 1))
+        section.page_start = estimated
+
+
+def _finalize_section_page_ranges(page_count: int, sections: list[SectionRecord]) -> None:
+    next_start = page_count if page_count > 0 else None
+    for section in reversed(sections):
+        if section.page_start is None and next_start is None:
+            continue
+        if section.page_start is None:
+            section.page_start = next_start
+        if section.page_end is None:
+            section.page_end = next_start if next_start is not None else section.page_start
+        if section.page_start is not None and section.page_end is not None and section.page_end < section.page_start:
+            section.page_end = section.page_start
+        if section.page_start is not None:
+            next_start = section.page_start
+
+
+def _assign_section_pages(document: DocumentRecord, markdown: str, sections: list[SectionRecord]) -> None:
+    if not sections or all(section.page_start is not None and section.page_end is not None for section in sections):
+        return
+    parser_output: dict[str, Any] = {}
+    try:
+        payload = json.loads(Path(document.structured_path).read_text(encoding="utf-8"))
+        loaded = payload.get("parser_output", {})
+        if isinstance(loaded, dict):
+            parser_output = loaded
+    except Exception:
+        parser_output = {}
+
+    if document.parser_used == "docling":
+        _assign_docling_section_pages(sections, parser_output)
+    elif document.parser_used == "marker":
+        _assign_marker_section_pages(sections, parser_output)
+
+    _assign_section_pages_by_position(markdown, document.page_count, sections)
+    _finalize_section_page_ranges(document.page_count, sections)
+
+
 def infer_section_type(heading_path: list[str], text: str) -> str:
     joined = " ".join(heading_path).lower() + "\n" + text[:1200].lower()
     if any(_contains_term(joined, token) for token in ["risk", "cybersecurity", "forward-looking"]):
@@ -681,6 +888,7 @@ def ingest_corpus(config: AppConfig, input_dir: str | Path | None = None) -> dic
         artifact = parse_document(path, config)
         document = infer_document_metadata(path, artifact)
         doc_sections = split_sections(document, artifact.raw_markdown)
+        _assign_section_pages(document, artifact.raw_markdown, doc_sections)
         doc_chunks = build_chunks(document, doc_sections, config)
         doc_tables = extract_tables(document, doc_sections)
 
